@@ -184,8 +184,8 @@ document.getElementById('reset-demo').addEventListener('click', () => {
 
 window.addEventListener('hashchange', render);
 
-if (new URLSearchParams(location.search).has('clean')) {
-  document.querySelector('.dev-bar').style.display = 'none';
-}
+const params = new URLSearchParams(location.search);
+if (params.has('clean')) document.querySelector('.dev-bar').style.display = 'none';
+if (params.get('shell') === '1') document.body.classList.add('keep-shell');
 
 render();

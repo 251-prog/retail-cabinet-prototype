@@ -69,6 +69,39 @@ body.full .phone-screen {
   border-radius: 0;
 }
 
+/* 手机等窄屏：自动铺满，不显示手机壳 / 开发条 / 模拟状态栏 */
+@media (max-width: 600px) {
+  body:not(.keep-shell) { background: var(--white); }
+  body:not(.keep-shell) .stage { padding: 0; }
+  body:not(.keep-shell) .phone {
+    position: fixed;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    height: 100dvh;
+    padding: 0;
+    border-radius: 0;
+    background: var(--white);
+    box-shadow: none;
+  }
+  body:not(.keep-shell) .phone-screen {
+    width: 100%;
+    height: 100%;
+    border-radius: 0;
+  }
+  body:not(.keep-shell) .dev-bar { display: none; }
+  body:not(.keep-shell) .statusbar { display: none; }
+  body:not(.keep-shell) .app-header,
+  body:not(.keep-shell) .pay-header { padding-top: env(safe-area-inset-top); }
+  body:not(.keep-shell) .bottom-bar,
+  body:not(.keep-shell) .sheet-footer,
+  body:not(.keep-shell) .pay-bar,
+  body:not(.keep-shell) .pickup-bar,
+  body:not(.keep-shell) .cart-sheet,
+  body:not(.keep-shell) .pay-sheet,
+  body:not(.keep-shell) .bottom-sheet { padding-bottom: calc(24px + env(safe-area-inset-bottom)); }
+}
+
 /* ---------- 开发工具条 ---------- */
 .dev-bar {
   position: fixed;
