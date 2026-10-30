@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>零售柜 · 可交互原型</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="css/tokens.css">
+<link rel="stylesheet" href="css/base.css">
+<link rel="stylesheet" href="css/screens.css">
+</head>
+<body>
+  <div class="stage">
+    <div class="phone" id="phone">
+      <div class="phone-screen" id="app"></div>
+    </div>
+  </div>
+  <div class="dev-bar">
+    <button type="button" class="dev-btn" id="toggle-full">全屏预览</button>
+    <button type="button" class="dev-btn" id="reset-demo">重置演示</button>
+  </div>
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+  <script type="module" src="js/app.js"></script>
+</body>
+</html>
