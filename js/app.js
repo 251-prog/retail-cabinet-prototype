@@ -142,7 +142,7 @@ document.addEventListener('click', (event) => {
     case 'back': {
       const to = el.dataset.to;
       if (to) { location.hash = to; return; }
-      if (currentRoute() !== '#/index') { location.hash = '#/index'; return; }
+      if (currentRoute() !== '#/home') { location.hash = '#/home'; return; }
       showToast('已经是第一页了');
       return;
     }

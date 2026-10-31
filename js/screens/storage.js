@@ -23,7 +23,7 @@ export function closeOpenDialog() { dialogOpen = false; }
 export function openLockerSheet() { lockerOpen = true; }
 export function closeLockerSheet() { lockerOpen = false; }
 
-function header(title, backTo = '#/index') {
+function header(title, backTo = '#/home') {
   return `
     <header class="pay-header">
       ${statusBar()}
