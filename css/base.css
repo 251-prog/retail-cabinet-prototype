@@ -93,7 +93,7 @@ body.full .phone-screen {
   body:not(.keep-shell) .statusbar { display: none; }
   body:not(.keep-shell) .app-header,
   body:not(.keep-shell) .pay-header,
-  body:not(.keep-shell) .home-header { padding-top: max(env(safe-area-inset-top), 0px); }
+  body:not(.keep-shell) .home-topbar { padding-top: max(env(safe-area-inset-top), 0px); }
   body:not(.keep-shell) .bottom-bar,
   body:not(.keep-shell) .sheet-footer,
   body:not(.keep-shell) .pay-bar,

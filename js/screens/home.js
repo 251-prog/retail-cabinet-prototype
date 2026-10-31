@@ -21,10 +21,11 @@ export const HOME_PRODUCTS = [
 export function renderHome() {
   return `
     <div class="screen home-screen">
-      <div class="home-bg"><img src="assets/home-bg.png" alt=""></div>
-      <header class="home-header">
-        ${statusBar()}
-        <div class="home-nav">
+      <main class="home-main">
+        <div class="home-bg"><img src="assets/home-bg.png" alt=""></div>
+        <header class="home-topbar">
+          ${statusBar()}
+          <div class="home-nav">
           <button type="button" class="home-loc" data-action="go" data-to="#/select">
             <img class="home-loc-pin" src="assets/svg/home/pin.svg" alt="">
             <span class="home-loc-text">中铁十二局…</span>
@@ -37,8 +38,8 @@ export function renderHome() {
             </button>
           </div>
         </div>
-      </header>
-      <main class="home-main">
+        </header>
+        <div class="home-content">
         <section class="home-hero">
           <p class="home-hello">您好，欢迎使用</p>
           <p class="home-title">智慧柜即时服务</p>
@@ -76,6 +77,7 @@ export function renderHome() {
           </div>
           ${Array.from({ length: 6 }, (_, i) => cabinetCard(i)).join('')}
         </section>
+        </div>
       </main>
       <nav class="home-tabbar">
         <button type="button" class="tab-item is-active" data-action="go" data-to="#/home">

@@ -1011,7 +1011,18 @@
   object-position: center top;
 }
 
-.home-header { position: relative; z-index: 3; flex: none; }
+.home-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: transparent;
+}
+.home-topbar.is-scrolled {
+  background: rgba(255, 255, 255, .94);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  box-shadow: 0 2px 8px rgba(15, 23, 42, .06);
+}
 .home-nav {
   height: 44px;
   display: flex;
@@ -1057,16 +1068,19 @@
 
 .home-main {
   position: relative;
-  z-index: 2;
   flex: 1;
   min-height: 0;
   overflow-y: auto;
-  padding: 0 16px calc(110px + env(safe-area-inset-bottom));
+  padding: 0;
+}
+.home-content {
+  position: relative;
+  z-index: 1;
   display: flex;
   flex-direction: column;
   gap: 16px;
+  padding: 0 16px calc(110px + env(safe-area-inset-bottom));
 }
-.home-main > * { flex-shrink: 0; }
 .nearest-card { margin-top: -6px; }
 
 .home-hero { position: relative; height: 88px; padding-top: 8px; }
@@ -1169,7 +1183,7 @@
 .nearby { display: flex; flex-direction: column; gap: 10px; }
 .nearby-head {
   position: sticky;
-  top: 0;
+  top: var(--home-topbar-h, 44px);
   z-index: 10;
   display: flex;
   align-items: center;
