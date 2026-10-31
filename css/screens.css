@@ -996,14 +996,17 @@
 .home-screen { position: relative; background: var(--white); }
 .home-bg {
   position: absolute;
-  top: -48px;
-  left: 0;
-  width: 100%;
-  height: auto;
+  inset: 0;
   z-index: 0;
   overflow: hidden;
 }
-.home-bg img { display: block; width: 100%; height: auto; }
+.home-bg img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center top;
+}
 
 .home-header { position: relative; z-index: 3; flex: none; }
 .home-nav {
