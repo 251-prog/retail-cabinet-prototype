@@ -94,8 +94,6 @@ body.full .phone-screen {
   body:not(.keep-shell) .app-header,
   body:not(.keep-shell) .pay-header,
   body:not(.keep-shell) .home-header { padding-top: max(env(safe-area-inset-top), 0px); }
-  /* 首页按 375×812 设计稿定位，手机端补足设计稿中状态栏的 48px 高度，保持柜体 y=100 的纵向位置 */
-  body:not(.keep-shell) .home-main { padding-top: 48px; }
   body:not(.keep-shell) .bottom-bar,
   body:not(.keep-shell) .sheet-footer,
   body:not(.keep-shell) .pay-bar,
