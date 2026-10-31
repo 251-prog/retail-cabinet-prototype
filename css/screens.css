@@ -1166,8 +1166,24 @@
   box-shadow: var(--shadow-soft);
   text-align: left;
   min-width: 0;
+  overflow: hidden;
 }
-.service-icon { width: 24px; height: 24px; flex: none; }
+.service-icon {
+  position: relative;
+  width: 24px;
+  height: 24px;
+  flex: none;
+  overflow: hidden;
+}
+.service-icon img { position: absolute; max-width: none; display: block; }
+.svc-storage img { width: 165.93%; height: 159.01%; left: -26.34%; top: -21.94%; }
+.svc-shop img { width: 172.71%; height: 165.52%; left: -37.07%; top: -24.14%; }
+.svc-charge img { width: 188.16%; height: 188.16%; left: -43.84%; top: -35.36%; }
+.svc-rent img { width: 140%; height: 140%; left: -16.67%; top: -16.67%; }
+.svc-preorder img { width: 144.83%; height: 144.83%; left: -24.14%; top: -17.24%; }
+.svc-publish img { width: 156.52%; height: 150%; left: -23.45%; top: -21.43%; }
+.svc-aftersale img { width: 193.85%; height: 161.54%; left: -46.92%; top: -23.08%; }
+.svc-order img { width: 189.59%; height: 144.83%; left: -43.9%; top: -17.24%; }
 .service-text { display: flex; flex-direction: column; min-width: 0; }
 .service-text b { font-size: var(--fs-12); font-weight: 400; line-height: var(--lh-18); color: var(--text-1); white-space: nowrap; }
 .service-text em { font-style: normal; font-size: 9px; line-height: 15px; color: var(--text-4); white-space: nowrap; }

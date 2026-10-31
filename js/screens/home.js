@@ -2,14 +2,14 @@ import { statusBar, productMedia } from '../components.js';
 import { getRegion } from '../store.js';
 
 const SERVICES = [
-  { icon: 'icon-storage.png', title: '寄存', sub: '安全寄存', route: '#/storage' },
-  { icon: 'icon-shop.png', title: '购物', sub: '物品选购', route: '#/select' },
-  { icon: 'icon-charge.png', title: '充电', sub: '设备充电', msg: '充电流程待搭建' },
-  { icon: 'icon-rent.png', title: '租赁', sub: '设备租赁', msg: '租赁流程待搭建' },
-  { icon: 'icon-preorder.png', title: '预购', sub: '提前预约', msg: '预购流程待搭建' },
-  { icon: 'icon-publish.png', title: '发布', sub: '闲置物品', msg: '发布流程待搭建' },
-  { icon: 'icon-aftersale.png', title: '售后', sub: '服务保障', msg: '售后流程待搭建' },
-  { icon: 'icon-order.png', title: '接单', sub: '快速接单', msg: '接单流程待搭建' },
+  { key: 'storage', icon: 'icon-storage.png', title: '寄存', sub: '安全寄存', route: '#/storage' },
+  { key: 'shop', icon: 'icon-shop.png', title: '购物', sub: '物品选购', route: '#/select' },
+  { key: 'charge', icon: 'icon-charge.png', title: '充电', sub: '设备充电', msg: '充电流程待搭建' },
+  { key: 'rent', icon: 'icon-rent.png', title: '租赁', sub: '设备租赁', msg: '租赁流程待搭建' },
+  { key: 'preorder', icon: 'icon-preorder.png', title: '预购', sub: '提前预约', msg: '预购流程待搭建' },
+  { key: 'publish', icon: 'icon-publish.png', title: '发布', sub: '闲置物品', msg: '发布流程待搭建' },
+  { key: 'aftersale', icon: 'icon-aftersale.png', title: '售后', sub: '服务保障', msg: '售后流程待搭建' },
+  { key: 'order', icon: 'icon-order.png', title: '接单', sub: '快速接单', msg: '接单流程待搭建' },
 ];
 
 export const HOME_PRODUCTS = [
@@ -64,7 +64,7 @@ export function renderHome() {
           ${SERVICES.map(s => `
             <button type="button" class="service-item"
               ${s.route ? `data-action="go" data-to="${s.route}"` : `data-action="soon" data-msg="${s.msg}"`}>
-              <img class="service-icon" src="assets/${s.icon}" alt="">
+              <span class="service-icon svc-${s.key}"><img src="assets/${s.icon}" alt=""></span>
               <span class="service-text"><b>${s.title}</b><em>${s.sub}</em></span>
             </button>`).join('')}
         </section>
