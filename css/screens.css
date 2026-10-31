@@ -1064,7 +1064,7 @@
   gap: 16px;
 }
 
-.home-hero { position: relative; height: 88px; padding-top: 8px; }
+.home-hero { position: relative; height: 88px; padding-top: 8px; padding-left: 178px; }
 .home-hello { position: relative; z-index: 1; font-size: var(--fs-12); line-height: var(--lh-18); color: var(--text-4); }
 .home-title {
   position: relative;
@@ -1078,8 +1078,8 @@
 .home-sub { position: relative; z-index: 1; margin-top: 4px; font-size: var(--fs-12); line-height: var(--lh-18); color: var(--text-3); }
 .home-hero-art {
   position: absolute;
-  right: 0;
-  left: auto;
+  left: 0;
+  right: auto;
   top: 8px;
   width: 172px;
   height: 162px;
