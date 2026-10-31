@@ -35,6 +35,7 @@ function render() {
     app.innerHTML = renderIndex();
   } else if (route === '#/home' || route === '#') {
     app.innerHTML = renderHome();
+    initHomeScroll();
   } else if (route === '#/storage') {
     app.innerHTML = renderStorageConfig();
   } else if (route === '#/storage/confirm') {
@@ -60,8 +61,18 @@ function render() {
   }
 }
 
-function goSelect() {
-  finishOrder();
+function initHomeScroll() {
+  const main = app.querySelector('.home-main');
+  const bg = app.querySelector('.home-bg');
+  if (!main || !bg) return;
+  main.addEventListener('scroll', () => {
+    const y = main.scrollTop;
+    bg.style.transform = `translateY(${-y}px)`;
+    bg.style.opacity = String(Math.max(0, 1 - y / 280));
+  }, { passive: true });
+}
+
+function goSelect() {  finishOrder();
   resetPayState();
   resetPickupState();
   location.hash = '#/select';

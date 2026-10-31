@@ -74,8 +74,7 @@ export function renderHome() {
             <h2>附近服务点</h2>
             <button type="button" class="nearby-more" data-action="soon" data-msg="更多服务点待接入">更多<img src="assets/svg/home/right-c.svg" alt=""></button>
           </div>
-          ${cabinetCard(true)}
-          ${cabinetCard(false)}
+          ${Array.from({ length: 6 }, (_, i) => cabinetCard(i)).join('')}
         </section>
       </main>
       <nav class="home-tabbar">
@@ -98,7 +97,10 @@ export function renderHome() {
     </div>`;
 }
 
-function cabinetCard(open) {
+function cabinetCard(index) {
+  const distance = (0.3 + index * 0.2).toFixed(1);
+  const cells = 8 - (index % 4);
+  const count = 7 - (index % 3);
   return `
     <article class="nearby-card" data-action="go" data-to="#/select">
       <div class="nearby-card-head">
@@ -107,11 +109,11 @@ function cabinetCard(open) {
           <div class="nearby-title-row">
             <span class="nearby-name-row">
               <span class="nearby-name">中铁十二局工地柜…</span>
-              <span class="tag tag-outline-green">${open ? '营业中' : '在线'}</span>
+              <span class="tag tag-outline-green">${index % 2 === 0 ? '营业中' : '在线'}</span>
             </span>
-            <span class="nearby-count">7件商品<img src="assets/svg/home/right-c.svg" alt=""></span>
+            <span class="nearby-count">${count}件商品<img src="assets/svg/home/right-c.svg" alt=""></span>
           </div>
-          <p class="nearby-meta"><img src="assets/svg/location.svg" alt="">0.3km｜8格可用</p>
+          <p class="nearby-meta"><img src="assets/svg/location.svg" alt="">${distance}km｜${cells}格可用</p>
           <div class="nearby-tags">
             <span class="tag tag-green-soft">零售</span>
             <span class="tag tag-green-soft">寄存</span>
