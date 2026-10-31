@@ -996,7 +996,7 @@
 .home-screen { position: relative; background: var(--white); }
 .home-bg {
   position: absolute;
-  top: 0;
+  top: -48px;
   left: 0;
   width: 100%;
   height: auto;
