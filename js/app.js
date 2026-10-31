@@ -100,6 +100,22 @@ document.addEventListener('click', (event) => {
     case 'soon':
       showToast(el.dataset.msg || '功能待搭建');
       return;
+    case 'region-open':
+      app.querySelector('.region-layer')?.classList.add('is-open');
+      return;
+    case 'region-close':
+      app.querySelector('.region-layer')?.classList.remove('is-open');
+      return;
+    case 'region-pick': {
+      const region = el.dataset.region;
+      const text = app.querySelector('.home-loc-text');
+      if (text) text.textContent = region;
+      app.querySelectorAll('.region-item').forEach(node => {
+        node.classList.toggle('is-active', node.dataset.region === region);
+      });
+      app.querySelector('.region-layer')?.classList.remove('is-open');
+      return;
+    }
     case 'add-home': {
       const product = HOME_PRODUCTS.find(p => p.id === el.dataset.id);
       if (!product) return;
