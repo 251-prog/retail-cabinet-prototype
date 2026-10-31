@@ -3,6 +3,7 @@ import {
   createOrder, setOrderQty, finishOrder, getState,
 } from './store.js';
 import { showToast } from './components.js';
+import { renderIndex } from './screens/index.js';
 import { renderSelect, setCategory } from './screens/select.js';
 import {
   renderPay, setMethod, closeSheet as closePaySheet, openSheet as openPaySheet,
@@ -18,12 +19,14 @@ import {
 const app = document.getElementById('app');
 
 function currentRoute() {
-  return (location.hash || '#/select').split('?')[0];
+  return (location.hash || '#/index').split('?')[0];
 }
 
 function render() {
   const route = currentRoute();
-  if (route === '#/pay') {
+  if (route === '#/index' || route === '#/' || route === '#') {
+    app.innerHTML = renderIndex();
+  } else if (route === '#/pay') {
     app.innerHTML = renderPay();
   } else if (route === '#/pay-success') {
     app.innerHTML = renderSuccess();
@@ -52,10 +55,13 @@ document.addEventListener('click', (event) => {
   const state = getState();
 
   switch (action) {
+    case 'go':
+      location.hash = el.dataset.to;
+      return;
     case 'back': {
       const to = el.dataset.to;
       if (to) { location.hash = to; return; }
-      if (currentRoute() !== '#/select') { location.hash = '#/select'; return; }
+      if (currentRoute() !== '#/index') { location.hash = '#/index'; return; }
       showToast('已经是第一页了');
       return;
     }

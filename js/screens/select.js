@@ -16,7 +16,7 @@ export function renderSelect() {
     <div class="screen screen-select">
       <header class="app-header">
         ${statusBar()}
-        ${navBar()}
+        ${navBar({ backTo: '#/index' })}
         ${cabinetCard()}
       </header>
       <main class="select-main">

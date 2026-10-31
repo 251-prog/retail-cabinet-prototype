@@ -12,11 +12,11 @@ export function statusBar() {
     </div>`;
 }
 
-export function navBar({ capsule = 'capsule', back = true } = {}) {
+export function navBar({ capsule = 'capsule', back = true, backTo = '' } = {}) {
   return `
     <div class="navbar">
       ${back
-        ? `<button type="button" class="nav-back" data-action="back" aria-label="返回"><img class="flip" src="assets/svg/back.svg" alt=""></button>`
+        ? `<button type="button" class="nav-back" data-action="back"${backTo ? ` data-to="${backTo}"` : ''} aria-label="返回"><img class="flip" src="assets/svg/back.svg" alt=""></button>`
         : `<span class="nav-back-placeholder"></span>`}
       <img class="nav-capsule" src="assets/svg/${capsule}.svg" alt="">
     </div>`;

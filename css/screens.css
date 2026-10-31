@@ -991,3 +991,67 @@
 
 /* 小尺寸商品图 */
 .media-xs.combo-art { width: 30px; height: 30px; }
+
+/* ================= 页面目录 ================= */
+.index-screen { background: var(--bg-page); }
+.index-header { padding-bottom: 16px; }
+.index-titlebar { padding: 8px 20px 0; }
+.index-titlebar h1 {
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 30px;
+  color: var(--text-1);
+}
+.index-titlebar p { margin-top: 4px; font-size: var(--fs-12); line-height: var(--lh-18); color: var(--text-4); }
+.index-main {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: 16px 16px calc(16px + env(safe-area-inset-bottom));
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.index-cta {
+  width: 100%;
+  height: 46px;
+  border-radius: var(--r-12);
+  background: var(--green);
+  color: var(--white);
+  font-size: var(--fs-14);
+  font-weight: 500;
+}
+.index-cta:active { background: var(--green-dark); }
+.index-list { display: flex; flex-direction: column; gap: 8px; }
+.index-item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  border-radius: var(--r-12);
+  background: var(--white);
+  box-shadow: var(--shadow-drop);
+  text-align: left;
+}
+.index-no {
+  flex: none;
+  padding: 4px 6px;
+  border-radius: var(--r-8);
+  background: var(--green-tint);
+  color: var(--green);
+  font-size: var(--fs-12);
+  font-weight: 500;
+  line-height: 16px;
+}
+.index-info { flex: 1; min-width: 0; display: flex; flex-direction: column; gap: 2px; }
+.index-name { font-size: 15px; font-weight: 500; line-height: 22px; color: var(--text-1); }
+.index-desc { font-size: var(--fs-12); line-height: var(--lh-18); color: var(--text-4); }
+.index-arrow { flex: none; font-size: 20px; line-height: 1; color: #c0c4cc; }
+.index-tip { padding: 4px 2px; font-size: var(--fs-12); line-height: var(--lh-18); color: var(--text-4); }
+.index-tip code {
+  padding: 1px 4px;
+  border-radius: var(--r-4);
+  background: var(--white);
+  color: var(--text-3);
+}
