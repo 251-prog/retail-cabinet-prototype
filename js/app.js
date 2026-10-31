@@ -5,6 +5,12 @@ import {
 import { showToast } from './components.js';
 import { renderIndex } from './screens/index.js';
 import { renderHome, HOME_PRODUCTS } from './screens/home.js';
+import {
+  renderStorageConfig, renderStorageConfirm, renderStorageOpened,
+  renderStorageActive, renderStoragePickup, renderStorageCabinet,
+  chooseSize, chooseDuration, openOpenDialog, closeOpenDialog,
+  openLockerSheet, closeLockerSheet,
+} from './screens/storage.js';
 import { renderSelect, setCategory } from './screens/select.js';
 import {
   renderPay, setMethod, closeSheet as closePaySheet, openSheet as openPaySheet,
@@ -20,15 +26,27 @@ import {
 const app = document.getElementById('app');
 
 function currentRoute() {
-  return (location.hash || '#/index').split('?')[0];
+  return (location.hash || '#/home').split('?')[0];
 }
 
 function render() {
   const route = currentRoute();
-  if (route === '#/index' || route === '#/' || route === '#') {
+  if (route === '#/index' || route === '#/') {
     app.innerHTML = renderIndex();
-  } else if (route === '#/home') {
+  } else if (route === '#/home' || route === '#') {
     app.innerHTML = renderHome();
+  } else if (route === '#/storage') {
+    app.innerHTML = renderStorageConfig();
+  } else if (route === '#/storage/confirm') {
+    app.innerHTML = renderStorageConfirm();
+  } else if (route === '#/storage/opened') {
+    app.innerHTML = renderStorageOpened();
+  } else if (route === '#/storage/active') {
+    app.innerHTML = renderStorageActive();
+  } else if (route === '#/storage/pickup') {
+    app.innerHTML = renderStoragePickup();
+  } else if (route === '#/storage/pickup/cabinet') {
+    app.innerHTML = renderStorageCabinet();
   } else if (route === '#/pay') {
     app.innerHTML = renderPay();
   } else if (route === '#/pay-success') {
@@ -71,6 +89,55 @@ document.addEventListener('click', (event) => {
       showToast('已加入购物车');
       return;
     }
+    case 'storage-size':
+      chooseSize(el.dataset.id);
+      render();
+      return;
+    case 'storage-duration':
+      chooseDuration(Number(el.dataset.h));
+      render();
+      return;
+    case 'storage-submit':
+      location.hash = '#/storage/confirm';
+      return;
+    case 'storage-open-dialog':
+      openOpenDialog();
+      render();
+      return;
+    case 'storage-open-cancel':
+      closeOpenDialog();
+      render();
+      return;
+    case 'storage-open-confirm':
+      closeOpenDialog();
+      location.hash = '#/storage/opened';
+      return;
+    case 'storage-done':
+      location.hash = '#/storage/active';
+      return;
+    case 'storage-later':
+      showToast('已锁定格口，可稍后开柜');
+      location.hash = '#/storage/active';
+      return;
+    case 'storage-retrieve':
+      location.hash = '#/storage/pickup';
+      return;
+    case 'storage-pickup-cabinet':
+      location.hash = '#/storage/pickup/cabinet';
+      return;
+    case 'storage-open-locker':
+      openLockerSheet();
+      render();
+      return;
+    case 'storage-close-locker':
+      closeLockerSheet();
+      render();
+      return;
+    case 'storage-locker-done':
+      closeLockerSheet();
+      showToast('取物完成');
+      location.hash = '#/home';
+      return;
     case 'back': {
       const to = el.dataset.to;
       if (to) { location.hash = to; return; }

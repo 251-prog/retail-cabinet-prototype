@@ -1,7 +1,7 @@
 import { statusBar, productMedia } from '../components.js';
 
 const SERVICES = [
-  { icon: 'icon-storage.png', title: '寄存', sub: '安全寄存', msg: '寄存流程待搭建' },
+  { icon: 'icon-storage.png', title: '寄存', sub: '安全寄存', route: '#/storage' },
   { icon: 'icon-shop.png', title: '购物', sub: '物品选购', route: '#/select' },
   { icon: 'icon-charge.png', title: '充电', sub: '设备充电', msg: '充电流程待搭建' },
   { icon: 'icon-rent.png', title: '租赁', sub: '设备租赁', msg: '租赁流程待搭建' },
@@ -32,6 +32,7 @@ export function renderHome() {
           </button>
           <div class="home-nav-right">
             <button type="button" class="home-bell" data-action="soon" data-msg="暂无新消息"><img src="assets/svg/home/bell.svg" alt=""></button>
+            <button type="button" class="home-directory" data-action="go" data-to="#/index">目录</button>
             <img class="home-capsule" src="assets/svg/capsule.svg" alt="">
           </div>
         </div>
@@ -41,7 +42,7 @@ export function renderHome() {
           <p class="home-hello">您好，欢迎使用</p>
           <p class="home-title">智慧柜即时服务</p>
           <p class="home-sub">寄存·租赁·售卖·充电 即取即用</p>
-          <img class="home-hero-art" src="assets/cabinet-hero.png" alt="">
+          <span class="home-hero-art"><img src="assets/cabinet-hero.png" alt=""></span>
         </section>
         <button type="button" class="nearest-card" data-action="go" data-to="#/select">
           <span class="nearest-left">

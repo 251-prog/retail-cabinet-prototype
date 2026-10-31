@@ -8,6 +8,10 @@ const PAGES = [
   { route: '#/pay-success', name: '支付成功', desc: '格口号、取货提示、立即取货' },
   { route: '#/pickup', name: '扫码取货', desc: '到柜扫码引导' },
   { route: '#/pickup/cabinet', name: '本柜取货', desc: '逐格开柜、进度、售后入口' },
+  { route: '#/storage', name: '智能存物', desc: '选择格口规格、寄存时长、下单' },
+  { route: '#/storage/confirm', name: '确认存物', desc: '柜格锁定、计时、立即/稍后开柜' },
+  { route: '#/storage/active', name: '存放中', desc: '存放计时、费用明细、取物入口' },
+  { route: '#/storage/pickup/cabinet', name: '寄存取物', desc: '扫码取物、本柜开柜' },
 ];
 
 export function renderIndex() {
