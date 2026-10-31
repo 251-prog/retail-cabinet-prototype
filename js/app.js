@@ -64,12 +64,17 @@ function render() {
 function initHomeScroll() {
   const main = app.querySelector('.home-main');
   const bg = app.querySelector('.home-bg');
+  const head = app.querySelector('.nearby-head');
   if (!main || !bg) return;
-  main.addEventListener('scroll', () => {
-    const y = main.scrollTop;
-    bg.style.transform = `translateY(${-y}px)`;
-    bg.style.opacity = String(Math.max(0, 1 - y / 280));
-  }, { passive: true });
+  const update = () => {
+    bg.style.transform = `translateY(${-main.scrollTop}px)`;
+    if (head) {
+      const stuck = head.getBoundingClientRect().top <= main.getBoundingClientRect().top + 0.5;
+      head.classList.toggle('is-stuck', stuck);
+    }
+  };
+  main.addEventListener('scroll', update, { passive: true });
+  update();
 }
 
 function goSelect() {  finishOrder();
