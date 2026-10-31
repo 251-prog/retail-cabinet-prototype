@@ -995,16 +995,23 @@
 /* ================= 首页 ================= */
 .home-screen { position: relative; background: var(--bg-soft); }
 .home-screen.screen { background: var(--bg-soft); }
+/* 背景图底部锚定在 375×812 设计稿的底部（y=812），顶部超出部分裁掉 */
 .home-bg {
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  height: auto;
+  height: 812px;
   z-index: 0;
   overflow: hidden;
 }
-.home-bg img { display: block; width: 100%; height: auto; }
+.home-bg img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center bottom;
+}
 
 .home-header {
   position: relative;
