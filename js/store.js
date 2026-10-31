@@ -46,6 +46,7 @@ export const CATALOG = [
 
 function seed() {
   return {
+    region: '深圳市南山区',
     cart: [
       {
         id: 'helmet',
@@ -87,6 +88,13 @@ function load() {
 let state = load();
 
 export function getState() { return state; }
+
+export function getRegion() { return state.region || '深圳市南山区'; }
+
+export function setRegion(region) {
+  state.region = region;
+  save();
+}
 
 export function save() {
   try { localStorage.setItem(KEY, JSON.stringify(state)); } catch { /* 隐私模式忽略 */ }

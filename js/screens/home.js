@@ -1,4 +1,5 @@
 import { statusBar, productMedia } from '../components.js';
+import { getRegion } from '../store.js';
 
 const SERVICES = [
   { icon: 'icon-storage.png', title: '寄存', sub: '安全寄存', route: '#/storage' },
@@ -18,8 +19,6 @@ export const HOME_PRODUCTS = [
   { id: 'home-water-2', name: '矿泉水 X 10', price: 50, unit: '/h', media: 'helmet', desc: '设备' },
 ];
 
-const REGIONS = ['深圳市南山区', '深圳市福田区', '深圳市宝安区', '深圳市龙岗区'];
-
 export function renderHome() {
   return `
     <div class="screen home-screen">
@@ -28,9 +27,9 @@ export function renderHome() {
         <header class="home-topbar">
           ${statusBar()}
           <div class="home-nav">
-          <button type="button" class="home-loc" data-action="region-open">
+          <button type="button" class="home-loc" data-action="go" data-to="#/address">
             <img class="home-loc-pin" src="assets/svg/home/pin.svg" alt="">
-            <span class="home-loc-text">深圳市南山区</span>
+            <span class="home-loc-text">${getRegion()}</span>
             <img class="home-loc-arrow" src="assets/svg/home/chevron-down.svg" alt="">
           </button>
           <div class="home-nav-right">
@@ -98,23 +97,6 @@ export function renderHome() {
           <img src="assets/svg/home/user.svg" alt=""><span>我的</span>
         </button>
       </nav>
-      <div class="region-layer">
-        <div class="region-mask" data-action="region-close"></div>
-        <section class="region-sheet" role="dialog" aria-label="选择区域">
-          <span class="sheet-handle"></span>
-          <div class="region-head">
-            <h2>选择区域</h2>
-            <button type="button" class="sheet-close" data-action="region-close" aria-label="关闭"><img src="assets/svg/close-sm.svg" alt=""></button>
-          </div>
-          <div class="region-list">
-            ${REGIONS.map((r, i) => `
-              <button type="button" class="region-item ${i === 0 ? 'is-active' : ''}" data-action="region-pick" data-region="${r}">
-                <span>${r}</span>
-                <img class="region-check" src="assets/svg/check-green.svg" alt="">
-              </button>`).join('')}
-          </div>
-        </section>
-      </div>
     </div>`;
 }
 

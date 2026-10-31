@@ -2,6 +2,7 @@ import { statusBar } from '../components.js';
 
 const PAGES = [
   { route: '#/home', name: '首页', desc: '柜机入口、服务宫格、附近服务点、底部 tab' },
+  { route: '#/address', name: '选择地区', desc: '搜索地区、常用地址、附近地址' },
   { route: '#/select', name: '选购页', desc: '分类切换、商品加购、购物车入口' },
   { route: '#/cart', name: '购物车', desc: '勾选、步进、清空、去结算（底部弹层）' },
   { route: '#/pay', name: '确认支付', desc: '订单明细、费用明细、支付方式' },

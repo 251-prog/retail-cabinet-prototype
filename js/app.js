@@ -1,10 +1,11 @@
 import {
   addToCart, addLine, setQty, toggleItem, toggleAll, clearCart, resetDemo,
-  createOrder, setOrderQty, finishOrder, getState,
+  createOrder, setOrderQty, finishOrder, getState, setRegion,
 } from './store.js';
 import { showToast } from './components.js';
 import { renderIndex } from './screens/index.js';
 import { renderHome, HOME_PRODUCTS } from './screens/home.js';
+import { renderAddress } from './screens/address.js';
 import {
   renderStorageConfig, renderStorageConfirm, renderStorageOpened,
   renderStorageActive, renderStoragePickup, renderStorageCabinet,
@@ -36,6 +37,9 @@ function render() {
   } else if (route === '#/home' || route === '#') {
     app.innerHTML = renderHome();
     initHomeScroll();
+  } else if (route === '#/address') {
+    app.innerHTML = renderAddress();
+    initAddressSearch();
   } else if (route === '#/storage') {
     app.innerHTML = renderStorageConfig();
   } else if (route === '#/storage/confirm') {
@@ -79,6 +83,20 @@ function initHomeScroll() {
   update();
 }
 
+function initAddressSearch() {
+  const input = app.querySelector('.addr-search-input');
+  if (!input) return;
+  input.addEventListener('input', () => {
+    const keyword = input.value.trim();
+    app.querySelectorAll('.addr-item').forEach(item => {
+      const hit = !keyword
+        || item.textContent.includes(keyword)
+        || (item.dataset.region || '').includes(keyword);
+      item.style.display = hit ? '' : 'none';
+    });
+  });
+}
+
 function goSelect() {  finishOrder();
   resetPayState();
   resetPickupState();
@@ -100,22 +118,19 @@ document.addEventListener('click', (event) => {
     case 'soon':
       showToast(el.dataset.msg || '功能待搭建');
       return;
-    case 'region-open':
-      app.querySelector('.region-layer')?.classList.add('is-open');
-      return;
-    case 'region-close':
-      app.querySelector('.region-layer')?.classList.remove('is-open');
-      return;
-    case 'region-pick': {
+    case 'region-select': {
       const region = el.dataset.region;
-      const text = app.querySelector('.home-loc-text');
-      if (text) text.textContent = region;
-      app.querySelectorAll('.region-item').forEach(node => {
-        node.classList.toggle('is-active', node.dataset.region === region);
-      });
-      app.querySelector('.region-layer')?.classList.remove('is-open');
+      if (region) {
+        setRegion(region);
+        location.hash = '#/home';
+      }
       return;
     }
+    case 'relocate':
+      setRegion('深圳市南山区');
+      showToast('已定位到深圳市南山区');
+      render();
+      return;
     case 'add-home': {
       const product = HOME_PRODUCTS.find(p => p.id === el.dataset.id);
       if (!product) return;
