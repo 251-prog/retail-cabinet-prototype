@@ -124,6 +124,25 @@ export function addToCart(id) {
   return true;
 }
 
+export function addLine(line) {
+  const existing = state.cart.find(i => i.id === line.id);
+  if (existing) {
+    existing.qty += 1;
+  } else {
+    state.cart.push({
+      id: line.id,
+      name: line.name,
+      desc: line.desc || '',
+      price: line.price,
+      qty: 1,
+      checked: true,
+      media: line.media,
+      tags: line.tags || [],
+    });
+  }
+  save();
+}
+
 export function setQty(id, qty) {
   const line = state.cart.find(item => item.id === id);
   if (!line) return;

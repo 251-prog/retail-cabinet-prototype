@@ -1,9 +1,10 @@
 import {
-  addToCart, setQty, toggleItem, toggleAll, clearCart, resetDemo,
+  addToCart, addLine, setQty, toggleItem, toggleAll, clearCart, resetDemo,
   createOrder, setOrderQty, finishOrder, getState,
 } from './store.js';
 import { showToast } from './components.js';
 import { renderIndex } from './screens/index.js';
+import { renderHome, HOME_PRODUCTS } from './screens/home.js';
 import { renderSelect, setCategory } from './screens/select.js';
 import {
   renderPay, setMethod, closeSheet as closePaySheet, openSheet as openPaySheet,
@@ -26,6 +27,8 @@ function render() {
   const route = currentRoute();
   if (route === '#/index' || route === '#/' || route === '#') {
     app.innerHTML = renderIndex();
+  } else if (route === '#/home') {
+    app.innerHTML = renderHome();
   } else if (route === '#/pay') {
     app.innerHTML = renderPay();
   } else if (route === '#/pay-success') {
@@ -58,6 +61,16 @@ document.addEventListener('click', (event) => {
     case 'go':
       location.hash = el.dataset.to;
       return;
+    case 'soon':
+      showToast(el.dataset.msg || '功能待搭建');
+      return;
+    case 'add-home': {
+      const product = HOME_PRODUCTS.find(p => p.id === el.dataset.id);
+      if (!product) return;
+      addLine(product);
+      showToast('已加入购物车');
+      return;
+    }
     case 'back': {
       const to = el.dataset.to;
       if (to) { location.hash = to; return; }
