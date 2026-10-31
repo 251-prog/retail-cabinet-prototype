@@ -69,12 +69,14 @@ function initHomeScroll() {
   const main = app.querySelector('.home-main');
   const bg = app.querySelector('.home-bg');
   const head = app.querySelector('.nearby-head');
+  const header = app.querySelector('.home-header');
   if (!main) return;
   const update = () => {
     if (bg) bg.style.transform = `translateY(${-main.scrollTop}px)`;
     if (head) {
       const stuck = head.getBoundingClientRect().top <= main.getBoundingClientRect().top + 0.5;
       head.classList.toggle('is-stuck', stuck);
+      if (header) header.classList.toggle('is-stuck', stuck);
     }
   };
   main.addEventListener('scroll', update, { passive: true });
