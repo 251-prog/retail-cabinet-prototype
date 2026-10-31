@@ -87,6 +87,7 @@ document.addEventListener('click', (event) => {
       if (!product) return;
       addLine(product);
       showToast('已加入购物车');
+      location.hash = '#/select';
       return;
     }
     case 'storage-size':

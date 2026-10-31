@@ -32,8 +32,9 @@ export function renderHome() {
           </button>
           <div class="home-nav-right">
             <button type="button" class="home-bell" data-action="soon" data-msg="暂无新消息"><img src="assets/svg/home/bell.svg" alt=""></button>
-            <button type="button" class="home-directory" data-action="go" data-to="#/index">目录</button>
-            <img class="home-capsule" src="assets/svg/capsule.svg" alt="">
+            <button type="button" class="nav-capsule-btn" data-action="go" data-to="#/index" aria-label="关闭并返回原型目录">
+              <img class="home-capsule" src="assets/svg/capsule.svg" alt="">
+            </button>
           </div>
         </div>
       </header>

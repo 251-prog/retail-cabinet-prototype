@@ -18,7 +18,9 @@ export function navBar({ capsule = 'capsule', back = true, backTo = '' } = {}) {
       ${back
         ? `<button type="button" class="nav-back" data-action="back"${backTo ? ` data-to="${backTo}"` : ''} aria-label="返回"><img class="flip" src="assets/svg/back.svg" alt=""></button>`
         : `<span class="nav-back-placeholder"></span>`}
-      <img class="nav-capsule" src="assets/svg/${capsule}.svg" alt="">
+      <button type="button" class="nav-capsule-btn" data-action="go" data-to="#/index" aria-label="关闭并返回原型目录">
+        <img class="nav-capsule" src="assets/svg/${capsule}.svg" alt="">
+      </button>
     </div>`;
 }
 

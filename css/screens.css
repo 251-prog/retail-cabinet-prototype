@@ -1027,16 +1027,13 @@
 }
 .home-loc-arrow { width: 16px; height: 16px; flex: none; }
 .home-nav-right { display: flex; align-items: center; gap: 8px; }
-.home-directory {
-  width: 32px;
+.nav-capsule-btn {
+  width: 87px;
   height: 32px;
   flex: none;
-  border-radius: var(--r-pill);
-  background: rgba(255, 255, 255, .86);
-  border: .5px solid var(--line);
-  font-size: var(--fs-12);
-  color: var(--text-3);
-  line-height: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .home-bell {
   width: 32px;

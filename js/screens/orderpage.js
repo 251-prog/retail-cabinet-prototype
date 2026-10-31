@@ -35,7 +35,9 @@ export function orderPage({ title = '确认订单', sheet = '' } = {}) {
         <div class="navbar navbar-title">
           <button type="button" class="nav-back" data-action="back" data-to="#/cart" aria-label="返回"><img src="assets/svg/back-pay.svg" alt=""></button>
           <h1 class="nav-title">${title}</h1>
-          <img class="nav-capsule" src="assets/svg/capsule-pay.svg" alt="">
+          <button type="button" class="nav-capsule-btn" data-action="go" data-to="#/index" aria-label="关闭并返回原型目录">
+            <img class="nav-capsule" src="assets/svg/capsule-pay.svg" alt="">
+          </button>
         </div>
       </header>
       <main class="pay-main">
