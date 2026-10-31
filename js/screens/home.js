@@ -22,11 +22,10 @@ export const HOME_PRODUCTS = [
 export function renderHome() {
   return `
     <div class="screen home-screen">
-      <main class="home-main">
-        <div class="home-bg"><img src="assets/home-bg.png" alt=""></div>
-        <header class="home-topbar">
-          ${statusBar()}
-          <div class="home-nav">
+      <div class="home-bg"><img src="assets/home-bg.png" alt=""></div>
+      <header class="home-header">
+        ${statusBar()}
+        <div class="home-nav">
           <button type="button" class="home-loc" data-action="go" data-to="#/address">
             <img class="home-loc-pin" src="assets/svg/home/pin.svg" alt="">
             <span class="home-loc-text">${getRegion()}</span>
@@ -39,7 +38,8 @@ export function renderHome() {
             </button>
           </div>
         </div>
-        </header>
+      </header>
+      <main class="home-main">
         <div class="home-content">
         <section class="home-hero">
           <p class="home-hello">您好，欢迎使用</p>

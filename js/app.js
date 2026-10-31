@@ -67,15 +67,13 @@ function render() {
 
 function initHomeScroll() {
   const main = app.querySelector('.home-main');
-  const topbar = app.querySelector('.home-topbar');
+  const bg = app.querySelector('.home-bg');
   const head = app.querySelector('.nearby-head');
-  if (!main || !topbar) return;
+  if (!main) return;
   const update = () => {
-    const barH = topbar.getBoundingClientRect().height;
-    main.style.setProperty('--home-topbar-h', `${barH}px`);
-    topbar.classList.toggle('is-scrolled', main.scrollTop > 2);
+    if (bg) bg.style.transform = `translateY(${-main.scrollTop}px)`;
     if (head) {
-      const stuck = head.getBoundingClientRect().top <= main.getBoundingClientRect().top + barH + 0.5;
+      const stuck = head.getBoundingClientRect().top <= main.getBoundingClientRect().top + 0.5;
       head.classList.toggle('is-stuck', stuck);
     }
   };
