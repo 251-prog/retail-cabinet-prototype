@@ -7,6 +7,9 @@ import { renderIndex } from './screens/index.js';
 import { renderHome, HOME_PRODUCTS } from './screens/home.js';
 import { renderAddress } from './screens/address.js';
 import { renderShopping } from './screens/shopping.js';
+import { renderMerchant } from './screens/merchant.js';
+import { renderScan } from './screens/scan.js';
+import { renderMine } from './screens/mine.js';
 import {
   renderStorageConfig, renderStorageConfirm, renderStorageOpened,
   renderStorageActive, renderStoragePickup, renderStorageCabinet,
@@ -43,6 +46,12 @@ function render() {
     initAddressSearch();
   } else if (route === '#/shopping') {
     app.innerHTML = renderShopping();
+  } else if (route === '#/merchant') {
+    app.innerHTML = renderMerchant();
+  } else if (route === '#/scan') {
+    app.innerHTML = renderScan();
+  } else if (route === '#/mine') {
+    app.innerHTML = renderMine();
   } else if (route === '#/storage') {
     app.innerHTML = renderStorageConfig();
   } else if (route === '#/storage/confirm') {

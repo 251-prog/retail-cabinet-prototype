@@ -47,13 +47,13 @@ export function renderShopping() {
         <button type="button" class="tab-item is-active" data-action="go" data-to="#/shopping">
           <img src="assets/svg/shop/bag-green.svg" alt=""><span>购物</span>
         </button>
-        <button type="button" class="tab-scan" data-action="soon" data-msg="扫码功能待接入">
+        <button type="button" class="tab-scan" data-action="go" data-to="#/scan">
           <span class="tab-scan-circle"><img src="assets/svg/home/scan.svg" alt="扫码"></span>
         </button>
-        <button type="button" class="tab-item" data-action="soon" data-msg="商家端待搭建">
+        <button type="button" class="tab-item" data-action="go" data-to="#/merchant">
           <img src="assets/svg/home/app.svg" alt=""><span>商家</span>
         </button>
-        <button type="button" class="tab-item" data-action="soon" data-msg="我的页面待搭建">
+        <button type="button" class="tab-item" data-action="go" data-to="#/mine">
           <img src="assets/svg/home/user.svg" alt=""><span>我的</span>
         </button>
       </nav>
