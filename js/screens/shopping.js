@@ -27,8 +27,10 @@ export function renderShopping() {
           <button type="button" class="shop-search-btn" data-action="soon" data-msg="搜索功能待接入">搜索</button>
         </label>
         <div class="shop-filters">
-          ${FILTERS.map((f, i) => `
-            <button type="button" class="shop-chip ${i === 0 ? 'is-active' : ''}" data-action="shop-filter" data-filter="${f}">${f}</button>`).join('')}
+          <div class="shop-chips">
+            ${FILTERS.map((f, i) => `
+              <button type="button" class="shop-chip ${i === 0 ? 'is-active' : ''}" data-action="shop-filter" data-filter="${f}">${f}</button>`).join('')}
+          </div>
           <button type="button" class="shop-sort" data-action="soon" data-msg="排序待接入">排序<img src="assets/svg/shop/sort.svg" alt=""></button>
         </div>
         <div class="shop-list">
