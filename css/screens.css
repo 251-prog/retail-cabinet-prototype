@@ -1198,7 +1198,10 @@
   padding: 11px 16px;
   background: transparent;
 }
-.nearby-head.is-stuck { background: var(--white); }
+.nearby-head.is-stuck {
+  background: var(--bg-soft);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, .08);
+}
 .nearby-head h2 { font-size: var(--fs-16); font-weight: 500; line-height: var(--lh-22); color: var(--text-1); }
 .nearby-more { display: flex; align-items: center; font-size: var(--fs-12); line-height: var(--lh-18); color: var(--text-4); }
 .nearby-more img { width: 18px; height: 18px; }
