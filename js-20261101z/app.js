@@ -6,6 +6,7 @@ import { showToast } from './components.js';
 import { renderIndex } from './screens/index.js';
 import { renderHome, HOME_PRODUCTS } from './screens/home.js';
 import { renderAddress } from './screens/address.js';
+import { renderShopping } from './screens/shopping.js';
 import {
   renderStorageConfig, renderStorageConfirm, renderStorageOpened,
   renderStorageActive, renderStoragePickup, renderStorageCabinet,
@@ -40,6 +41,8 @@ function render() {
   } else if (route === '#/address') {
     app.innerHTML = renderAddress();
     initAddressSearch();
+  } else if (route === '#/shopping') {
+    app.innerHTML = renderShopping();
   } else if (route === '#/storage') {
     app.innerHTML = renderStorageConfig();
   } else if (route === '#/storage/confirm') {
@@ -73,10 +76,10 @@ function initHomeScroll() {
   if (!main) return;
   const update = () => {
     if (bg) bg.style.transform = `translateY(${-main.scrollTop}px)`;
+    if (header) header.classList.toggle('is-stuck', main.scrollTop > 2);
     if (head) {
       const stuck = head.getBoundingClientRect().top <= main.getBoundingClientRect().top + 0.5;
       head.classList.toggle('is-stuck', stuck);
-      if (header) header.classList.toggle('is-stuck', stuck);
     }
   };
   main.addEventListener('scroll', update, { passive: true });
@@ -118,6 +121,13 @@ document.addEventListener('click', (event) => {
     case 'soon':
       showToast(el.dataset.msg || '功能待搭建');
       return;
+    case 'shop-filter': {
+      const filter = el.dataset.filter;
+      app.querySelectorAll('.shop-chip').forEach(chip => {
+        chip.classList.toggle('is-active', chip.dataset.filter === filter);
+      });
+      return;
+    }
     case 'region-select': {
       const region = el.dataset.region;
       if (region) {

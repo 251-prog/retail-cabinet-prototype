@@ -84,7 +84,7 @@ export function renderHome() {
         <button type="button" class="tab-item is-active" data-action="go" data-to="#/home">
           <img src="assets/svg/home/home.svg" alt=""><span>首页</span>
         </button>
-        <button type="button" class="tab-item" data-action="go" data-to="#/select">
+        <button type="button" class="tab-item" data-action="go" data-to="#/shopping">
           <img src="assets/svg/home/bag.svg" alt=""><span>购物</span>
         </button>
         <button type="button" class="tab-scan" data-action="soon" data-msg="扫码功能待接入">
@@ -100,7 +100,7 @@ export function renderHome() {
     </div>`;
 }
 
-function cabinetCard(index) {
+export function cabinetCard(index) {
   const distance = (0.3 + index * 0.2).toFixed(1);
   const cells = 8 - (index % 4);
   const count = 7 - (index % 3);

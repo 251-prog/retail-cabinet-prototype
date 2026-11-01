@@ -1521,6 +1521,94 @@
 .storage-thumb { padding: 4px; background: var(--bg-soft); }
 .storage-thumb img { width: 100%; height: 100%; object-fit: contain; }
 
+/* ---------- 购物页 ---------- */
+.shop-screen {
+  position: relative;
+  background: linear-gradient(180deg, #fff 0%, var(--bg-page) 79.19%);
+}
+.shop-main {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  padding: 0 16px calc(110px + env(safe-area-inset-bottom));
+}
+.shop-main > * { flex-shrink: 0; }
+.shop-search {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  height: 42px;
+  padding-left: 12px;
+  border: 1px solid var(--line);
+  border-radius: var(--r-8);
+  background: var(--white);
+}
+.shop-search > img { width: 24px; height: 24px; flex: none; }
+.shop-search-input {
+  flex: 1;
+  min-width: 0;
+  border: 0;
+  outline: 0;
+  background: transparent;
+  font-family: inherit;
+  font-size: var(--fs-14);
+  line-height: var(--lh-20);
+  color: var(--text-1);
+}
+.shop-search-input::placeholder { color: var(--text-4); }
+.shop-search-btn { padding: 0 16px; font-size: var(--fs-14); line-height: var(--lh-20); color: var(--text-1); }
+
+.shop-filters { display: flex; align-items: center; gap: 8px; overflow-x: auto; }
+.shop-chip {
+  flex: none;
+  height: 28px;
+  padding: 0 10px;
+  border: 1px solid var(--line);
+  border-radius: 50px;
+  background: var(--white);
+  font-size: var(--fs-12);
+  line-height: var(--lh-18);
+  color: var(--text-1);
+}
+.shop-chip.is-active { background: var(--green); border-color: var(--green); color: #fefefe; }
+.shop-sort {
+  flex: none;
+  margin-left: auto;
+  height: 38px;
+  padding-left: 8px;
+  display: flex;
+  align-items: center;
+  font-size: var(--fs-14);
+  line-height: var(--lh-20);
+  color: var(--text-1);
+  background: var(--white);
+  box-shadow: -1px 0 2px #f3f5f8;
+}
+.shop-sort img { width: 19px; height: 24px; }
+.shop-list { display: flex; flex-direction: column; gap: 12px; }
+
+.shop-cart {
+  position: absolute;
+  right: 16px;
+  bottom: calc(101px + env(safe-area-inset-bottom));
+  z-index: 19;
+  width: 54px;
+  height: 54px;
+  border-radius: var(--r-pill);
+  border: 1px solid var(--white);
+  background: rgba(255, 255, 255, .8);
+  backdrop-filter: blur(15px);
+  -webkit-backdrop-filter: blur(15px);
+  box-shadow: 0 0 30px rgba(15, 23, 42, .1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.shop-cart img { width: 24px; height: 24px; }
+
 /* ---------- 选择地区（地址页） ---------- */
 .addr-main {
   flex: 1;
