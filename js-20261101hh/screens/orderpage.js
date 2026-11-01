@@ -9,7 +9,7 @@ export function cabinetCard() {
         <span class="pay-card-side">自提</span>
       </div>
       <div class="cabinet-row">
-        <div class="cabinet-thumb"><img src="assets-20261101gg/cabinet.png" alt=""></div>
+        <div class="cabinet-thumb"><img src="assets-20261101hh/cabinet.png" alt=""></div>
         <div class="cabinet-info">
           <div class="cabinet-title-row">
             <span class="cabinet-name">${CABINET.name}</span>
@@ -33,10 +33,10 @@ export function orderPage({ title = '确认订单', sheet = '' } = {}) {
       <header class="pay-header">
         ${statusBar()}
         <div class="navbar navbar-title">
-          <button type="button" class="nav-back" data-action="back" data-to="#/cart" aria-label="返回"><img src="assets-20261101gg/svg/back-pay.svg" alt=""></button>
+          <button type="button" class="nav-back" data-action="back" data-to="#/cart" aria-label="返回"><img src="assets-20261101hh/svg/back-pay.svg" alt=""></button>
           <h1 class="nav-title">${title}</h1>
           <button type="button" class="nav-capsule-btn" data-action="go" data-to="#/index" aria-label="关闭并返回原型目录">
-            <img class="nav-capsule" src="assets-20261101gg/svg/capsule-pay.svg" alt="">
+            <img class="nav-capsule" src="assets-20261101hh/svg/capsule-pay.svg" alt="">
           </button>
         </div>
       </header>
@@ -76,9 +76,9 @@ function orderCard(order) {
               <div class="cart-bottom">
                 <span class="price"><span class="cny">¥ </span><span class="num">${formatMoney(item.price)}</span></span>
                 <div class="stepper">
-                  <button type="button" class="step-btn" data-action="pay-dec" data-id="${item.id}" aria-label="减少"><img src="assets-20261101gg/svg/minus-sm.svg" alt=""></button>
+                  <button type="button" class="step-btn" data-action="pay-dec" data-id="${item.id}" aria-label="减少"><img src="assets-20261101hh/svg/minus-sm.svg" alt=""></button>
                   <span class="step-qty">${item.qty}</span>
-                  <button type="button" class="step-btn" data-action="pay-inc" data-id="${item.id}" aria-label="增加"><img src="assets-20261101gg/svg/plus.svg" alt=""></button>
+                  <button type="button" class="step-btn" data-action="pay-inc" data-id="${item.id}" aria-label="增加"><img src="assets-20261101hh/svg/plus.svg" alt=""></button>
                 </div>
               </div>
             </div>
