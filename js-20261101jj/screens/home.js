@@ -23,19 +23,19 @@ export function renderHome() {
   return `
     <div class="screen home-screen">
       <main class="home-main">
-      <div class="home-bg"><img src="assets-20261101ii/home-bg.png" alt=""></div>
+      <div class="home-bg"><img src="assets-20261101jj/home-bg.png" alt=""></div>
       <header class="home-topbar">
         ${statusBar()}
         <div class="home-nav">
           <button type="button" class="home-loc" data-action="go" data-to="#/address">
-            <span class="home-loc-slot"><img class="home-loc-pin" src="assets-20261101ii/svg/home/pin.svg" alt=""></span>
+            <span class="home-loc-slot"><img class="home-loc-pin" src="assets-20261101jj/svg/home/pin.svg" alt=""></span>
             <span class="home-loc-text">${getRegion()}</span>
-            <img class="home-loc-arrow" src="assets-20261101ii/svg/home/chevron-down.svg" alt="">
+            <img class="home-loc-arrow" src="assets-20261101jj/svg/home/chevron-down.svg" alt="">
           </button>
           <div class="home-nav-right">
-            <button type="button" class="home-bell" data-action="soon" data-msg="暂无新消息"><img src="assets-20261101ii/svg/home/bell.svg" alt=""></button>
+            <button type="button" class="home-bell" data-action="soon" data-msg="暂无新消息"><img src="assets-20261101jj/svg/home/bell.svg" alt=""></button>
             <button type="button" class="nav-capsule-btn" data-action="go" data-to="#/index" aria-label="关闭并返回原型目录">
-              <img class="home-capsule" src="assets-20261101ii/svg/capsule.svg" alt="">
+              <img class="home-capsule" src="assets-20261101jj/svg/capsule.svg" alt="">
             </button>
           </div>
         </div>
@@ -45,36 +45,36 @@ export function renderHome() {
           <p class="home-hello">您好，欢迎使用</p>
           <p class="home-title">智慧柜即时服务</p>
           <p class="home-sub">寄存·租赁·售卖·充电 即取即用</p>
-          <span class="home-hero-art"><img src="assets-20261101ii/cabinet-hero.png" alt=""></span>
+          <span class="home-hero-art"><img src="assets-20261101jj/cabinet-hero.png" alt=""></span>
         </section>
         <button type="button" class="nearest-card" data-action="go" data-to="#/select">
           <span class="nearest-left">
-            <span class="nearest-title"><img src="assets-20261101ii/svg/home/right-one.svg" alt="">最近可用柜</span>
-            <span class="nearest-dist"><img src="assets-20261101ii/svg/location.svg" alt="">0.3km</span>
+            <span class="nearest-title"><img src="assets-20261101jj/svg/home/right-one.svg" alt="">最近可用柜</span>
+            <span class="nearest-dist"><img src="assets-20261101jj/svg/location.svg" alt="">0.3km</span>
           </span>
           <span class="nearest-stats">
-            <span class="nearest-stat"><img src="assets-20261101ii/svg/home/all-app.svg" alt=""><span><b>10 <i>格</i></b><em>可用</em></span></span>
-            <img class="nearest-divider" src="assets-20261101ii/svg/home/divider.svg" alt="">
-            <span class="nearest-stat"><img src="assets-20261101ii/svg/home/app-switch.svg" alt=""><span><b>99 <i>台</i></b><em>可用</em></span></span>
-            <img class="nearest-divider" src="assets-20261101ii/svg/home/divider.svg" alt="">
-            <span class="nearest-stat"><img src="assets-20261101ii/svg/home/time.svg" alt=""><span><b>24h</b><em>服务</em></span></span>
+            <span class="nearest-stat"><img src="assets-20261101jj/svg/home/all-app.svg" alt=""><span><b>10 <i>格</i></b><em>可用</em></span></span>
+            <img class="nearest-divider" src="assets-20261101jj/svg/home/divider.svg" alt="">
+            <span class="nearest-stat"><img src="assets-20261101jj/svg/home/app-switch.svg" alt=""><span><b>99 <i>台</i></b><em>可用</em></span></span>
+            <img class="nearest-divider" src="assets-20261101jj/svg/home/divider.svg" alt="">
+            <span class="nearest-stat"><img src="assets-20261101jj/svg/home/time.svg" alt=""><span><b>24h</b><em>服务</em></span></span>
           </span>
         </button>
         <section class="service-grid">
           ${SERVICES.map(s => `
             <button type="button" class="service-item"
               ${s.route ? `data-action="go" data-to="${s.route}"` : `data-action="soon" data-msg="${s.msg}"`}>
-              <span class="service-icon svc-${s.key}"><img src="assets-20261101ii/${s.icon}" alt=""></span>
+              <span class="service-icon svc-${s.key}"><img src="assets-20261101jj/${s.icon}" alt=""></span>
               <span class="service-text"><b>${s.title}</b><em>${s.sub}</em></span>
             </button>`).join('')}
         </section>
         <button type="button" class="promo-scan" data-action="soon" data-msg="扫码购物待接入">
-          <img src="assets-20261101ii/promo-scan.png" alt="扫码购物">
+          <img src="assets-20261101jj/promo-scan.png" alt="扫码购物">
         </button>
         <section class="nearby">
           <div class="nearby-head">
             <h2>附近服务点</h2>
-            <button type="button" class="nearby-more" data-action="soon" data-msg="更多服务点待接入">更多<img src="assets-20261101ii/svg/home/right-c.svg" alt=""></button>
+            <button type="button" class="nearby-more" data-action="soon" data-msg="更多服务点待接入">更多<img src="assets-20261101jj/svg/home/right-c.svg" alt=""></button>
           </div>
           ${Array.from({ length: 6 }, (_, i) => cabinetCard(i)).join('')}
         </section>
@@ -82,19 +82,19 @@ export function renderHome() {
       </main>
       <nav class="home-tabbar">
         <button type="button" class="tab-item is-active" data-action="go" data-to="#/home">
-          <img src="assets-20261101ii/svg/home/home.svg" alt=""><span>首页</span>
+          <img src="assets-20261101jj/svg/home/home.svg" alt=""><span>首页</span>
         </button>
         <button type="button" class="tab-item" data-action="go" data-to="#/shopping">
-          <img src="assets-20261101ii/svg/home/bag.svg" alt=""><span>购物</span>
+          <img src="assets-20261101jj/svg/home/bag.svg" alt=""><span>购物</span>
         </button>
         <button type="button" class="tab-scan" data-action="soon" data-msg="扫码功能待接入">
-          <span class="tab-scan-circle"><img src="assets-20261101ii/svg/home/scan.svg" alt="扫码"></span>
+          <span class="tab-scan-circle"><img src="assets-20261101jj/svg/home/scan.svg" alt="扫码"></span>
         </button>
         <button type="button" class="tab-item" data-action="soon" data-msg="商家端待搭建">
-          <img src="assets-20261101ii/svg/home/app.svg" alt=""><span>商家</span>
+          <img src="assets-20261101jj/svg/home/app.svg" alt=""><span>商家</span>
         </button>
         <button type="button" class="tab-item" data-action="soon" data-msg="我的页面待搭建">
-          <img src="assets-20261101ii/svg/home/user.svg" alt=""><span>我的</span>
+          <img src="assets-20261101jj/svg/home/user.svg" alt=""><span>我的</span>
         </button>
       </nav>
     </div>`;
@@ -107,16 +107,16 @@ export function cabinetCard(index) {
   return `
     <article class="nearby-card" data-action="go" data-to="#/select">
       <div class="nearby-card-head">
-        <div class="cabinet-thumb"><img src="assets-20261101ii/cabinet.png" alt=""></div>
+        <div class="cabinet-thumb"><img src="assets-20261101jj/cabinet.png" alt=""></div>
         <div class="nearby-card-info">
           <div class="nearby-title-row">
             <span class="nearby-name-row">
               <span class="nearby-name">中铁十二局工地柜…</span>
               <span class="tag tag-outline-green">${index % 2 === 0 ? '营业中' : '在线'}</span>
             </span>
-            <span class="nearby-count">${count}件商品<img src="assets-20261101ii/svg/home/right-c.svg" alt=""></span>
+            <span class="nearby-count">${count}件商品<img src="assets-20261101jj/svg/home/right-c.svg" alt=""></span>
           </div>
-          <p class="nearby-meta"><img src="assets-20261101ii/svg/location.svg" alt="">${distance}km｜${cells}格可用</p>
+          <p class="nearby-meta"><img src="assets-20261101jj/svg/location.svg" alt="">${distance}km｜${cells}格可用</p>
           <div class="nearby-tags">
             <span class="tag tag-green-soft">零售</span>
             <span class="tag tag-green-soft">寄存</span>
@@ -137,7 +137,7 @@ export function cabinetCard(index) {
                 <em>${p.desc}</em>
               </span>
               <button type="button" class="icon-btn" data-action="add-home" data-id="${p.id}" aria-label="加入购物车">
-                <img src="assets-20261101ii/svg/home/plus.svg" alt="">
+                <img src="assets-20261101jj/svg/home/plus.svg" alt="">
               </button>
             </div>
           </div>`).join('')}

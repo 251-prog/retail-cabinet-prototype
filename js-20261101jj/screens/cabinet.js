@@ -58,9 +58,9 @@ export function renderCabinet() {
       <header class="pay-header">
         ${statusBar()}
         <div class="navbar navbar-title">
-          <button type="button" class="nav-back" data-action="back" data-to="#/pickup" aria-label="返回"><img src="assets-20261101ii/svg/back-pay.svg" alt=""></button>
+          <button type="button" class="nav-back" data-action="back" data-to="#/pickup" aria-label="返回"><img src="assets-20261101jj/svg/back-pay.svg" alt=""></button>
           <h1 class="nav-title">本柜取货</h1>
-          <img class="nav-capsule" src="assets-20261101ii/svg/capsule-pay.svg" alt="">
+          <img class="nav-capsule" src="assets-20261101jj/svg/capsule-pay.svg" alt="">
         </div>
       </header>
       <main class="pay-main pickup-main">
@@ -110,20 +110,20 @@ function openSheet(item) {
       <div class="sheet-mask" data-action="close-locker"></div>
       <section class="bottom-sheet open-sheet" role="dialog" aria-label="${item.locker}格已开">
         <span class="sheet-handle"></span>
-        <button type="button" class="sheet-close success-close" data-action="close-locker" aria-label="关闭"><img src="assets-20261101ii/svg/close-sm.svg" alt=""></button>
+        <button type="button" class="sheet-close success-close" data-action="close-locker" aria-label="关闭"><img src="assets-20261101jj/svg/close-sm.svg" alt=""></button>
         <div class="open-hero">
-          <span class="locker-icon"><img src="assets-20261101ii/svg/locker-open.svg" alt=""></span>
+          <span class="locker-icon"><img src="assets-20261101jj/svg/locker-open.svg" alt=""></span>
           <p class="open-title">${item.locker}格已开</p>
           <p class="open-sub">${item.name}${item.qty > 1 ? ` ×${item.qty}` : ''}<br>请取出商品并关好柜门</p>
         </div>
         <div class="warn-box">
-          <img src="assets-20261101ii/svg/attention.svg" alt="">
+          <img src="assets-20261101jj/svg/attention.svg" alt="">
           <p>开柜即交易成功，24h 内可售后。柜门未关好将提醒您。</p>
         </div>
         <button type="button" class="protect-row" data-action="after-sale">
-          <img class="protect-icon" src="assets-20261101ii/svg/protect.svg" alt="">
+          <img class="protect-icon" src="assets-20261101jj/svg/protect.svg" alt="">
           <span>商品缺失/损坏？点此售后（针对本商品）</span>
-          <img class="chevron" src="assets-20261101ii/svg/chevron.svg" alt="">
+          <img class="chevron" src="assets-20261101jj/svg/chevron.svg" alt="">
         </button>
         <button type="button" class="btn-primary sheet-wide-btn" data-action="locker-done">我已关门</button>
       </section>
