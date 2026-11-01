@@ -22,8 +22,9 @@ export const HOME_PRODUCTS = [
 export function renderHome() {
   return `
     <div class="screen home-screen">
+      <main class="home-main">
       <div class="home-bg"><img src="assets/home-bg.png" alt=""></div>
-      <header class="home-header">
+      <header class="home-topbar">
         ${statusBar()}
         <div class="home-nav">
           <button type="button" class="home-loc" data-action="go" data-to="#/address">
@@ -39,7 +40,6 @@ export function renderHome() {
           </div>
         </div>
       </header>
-      <main class="home-main">
         <div class="home-content">
         <section class="home-hero">
           <p class="home-hello">您好，欢迎使用</p>

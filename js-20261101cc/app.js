@@ -70,15 +70,18 @@ function render() {
 
 function initHomeScroll() {
   const main = app.querySelector('.home-main');
-  const bg = app.querySelector('.home-bg');
+  const header = app.querySelector('.home-topbar');
   const head = app.querySelector('.nearby-head');
-  const header = app.querySelector('.home-header');
   if (!main) return;
   const update = () => {
-    if (bg) bg.style.transform = `translateY(${-main.scrollTop}px)`;
-    if (header) header.classList.toggle('is-stuck', main.scrollTop > 2);
+    const headerH = header ? header.getBoundingClientRect().height : 0;
+    if (header) {
+      const scrolled = main.scrollTop > 2;
+      header.classList.toggle('is-scrolled', scrolled);
+      main.style.setProperty('--home-header-h', `${headerH}px`);
+    }
     if (head) {
-      const stuck = head.getBoundingClientRect().top <= main.getBoundingClientRect().top + 0.5;
+      const stuck = head.getBoundingClientRect().top <= main.getBoundingClientRect().top + headerH + 0.5;
       head.classList.toggle('is-stuck', stuck);
     }
   };

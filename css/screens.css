@@ -1013,13 +1013,13 @@
   object-position: center bottom;
 }
 
-.home-header {
-  position: relative;
-  z-index: 3;
-  flex: none;
-  transition: background-color .15s ease;
+.home-topbar {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: transparent;
 }
-.home-header.is-stuck { background: var(--white); }
+.home-topbar.is-scrolled { background: var(--white); }
 .home-nav {
   height: 44px;
   display: flex;
@@ -1189,7 +1189,7 @@
 .nearby { display: flex; flex-direction: column; gap: 10px; }
 .nearby-head {
   position: sticky;
-  top: 0;
+  top: var(--home-header-h, 44px);
   z-index: 10;
   display: flex;
   align-items: center;
