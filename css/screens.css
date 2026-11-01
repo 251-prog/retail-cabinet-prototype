@@ -1036,7 +1036,7 @@
   align-items: center;
   justify-content: center;
 }
-.home-loc-pin { width: 19px; height: 22px; flex: none; object-fit: contain; }
+.home-loc-pin { width: 17.1429px; height: 20px; flex: none; object-fit: contain; }
 .home-loc-text {
   max-width: 110px;
   font-size: 18px;
@@ -1140,7 +1140,7 @@
 .nearest-title { display: flex; align-items: center; font-size: var(--fs-12); line-height: var(--lh-18); color: var(--text-1); white-space: nowrap; }
 .nearest-title img { width: 18px; height: 18px; flex: none; object-fit: contain; }
 .nearest-dist { display: flex; align-items: center; font-size: var(--fs-12); line-height: var(--lh-18); color: var(--text-1); }
-.nearest-dist img { width: 10.36px; height: 12px; margin: 0 6.86px 0 0.86px; object-fit: contain; }
+.nearest-dist img { width: 10.2857px; height: 12px; margin: 0 6.86px 0 0.86px; object-fit: contain; }
 .nearest-stats { flex: 1; min-width: 0; display: flex; align-items: center; gap: 12px; }
 .nearest-stat { display: flex; align-items: center; gap: 8px; }
 .nearest-stat > img { width: 18px; height: 18px; flex: none; object-fit: contain; }
@@ -1241,7 +1241,7 @@
 .nearby-count { display: flex; align-items: center; flex: none; font-size: var(--fs-12); line-height: var(--lh-18); color: var(--text-4); white-space: nowrap; }
 .nearby-count img { width: 18px; height: 18px; object-fit: contain; }
 .nearby-meta { display: flex; align-items: center; font-size: var(--fs-12); line-height: var(--lh-18); color: var(--text-4); }
-.nearby-meta img { width: 10.36px; height: 12px; margin: 0 6.86px 0 0.86px; object-fit: contain; }
+.nearby-meta img { width: 10.2857px; height: 12px; margin: 0 6.86px 0 0.86px; object-fit: contain; }
 .nearby-tags { display: flex; gap: 4px; flex-wrap: wrap; }
 .nearby-tags .tag { padding: 0 6px; }
 
@@ -2067,7 +2067,7 @@
   font-size: var(--fs-10);
   line-height: var(--lh-16);
 }
-.addr-tag img { width: 8.64px; height: 10px; object-fit: contain; }
+.addr-tag img { width: 8.5714px; height: 10px; object-fit: contain; }
 .addr-item-name {
   font-size: var(--fs-14);
   font-weight: 500;

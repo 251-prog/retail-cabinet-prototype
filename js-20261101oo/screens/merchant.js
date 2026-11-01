@@ -53,7 +53,7 @@ export function renderMerchant() {
             <p class="merchant-title-sub">今日经营概况·4台柜</p>
           </div>
           <button type="button" class="nav-capsule-btn" data-action="go" data-to="#/index" aria-label="关闭并返回原型目录">
-            <img class="nav-capsule" src="assets-20261101nn/svg/capsule.svg" alt="">
+            <img class="nav-capsule" src="assets-20261101oo/svg/capsule.svg" alt="">
           </button>
         </div>
       </header>
@@ -61,24 +61,24 @@ export function renderMerchant() {
       <main class="merchant-main">
         <section class="merchant-metrics">
           <div class="merchant-sales">
-            <img class="merchant-sales-art" src="assets-20261101nn/merchant/sales.png" alt="">
+            <img class="merchant-sales-art" src="assets-20261101oo/merchant/sales.png" alt="">
             <p class="merchant-sales-label">今日销售额</p>
             <p class="merchant-sales-amount"><span class="cny">¥</span> 386386386.00</p>
             <p class="merchant-sales-trend">↑ 较昨日 +12%</p>
           </div>
           <div class="merchant-metric-row">
             <div class="merchant-metric metric-green">
-              <span class="merchant-metric-label">待接订单<img src="assets-20261101nn/merchant/ic-orders.png" alt=""></span>
+              <span class="merchant-metric-label">待接订单<img src="assets-20261101oo/merchant/ic-orders.png" alt=""></span>
               <b>7</b>
               <em>预订 4 · 需求 3</em>
             </div>
             <div class="merchant-metric metric-blue">
-              <span class="merchant-metric-label">在柜商品<img src="assets-20261101nn/merchant/ic-products.png" alt=""></span>
+              <span class="merchant-metric-label">在柜商品<img src="assets-20261101oo/merchant/ic-products.png" alt=""></span>
               <b>42</b>
               <em>覆盖 4 台柜</em>
             </div>
             <div class="merchant-metric metric-red">
-              <span class="merchant-metric-label">异常格口<img src="assets-20261101nn/merchant/ic-alerts.png" alt=""></span>
+              <span class="merchant-metric-label">异常格口<img src="assets-20261101oo/merchant/ic-alerts.png" alt=""></span>
               <b>2</b>
               <em>待处理</em>
             </div>
@@ -88,7 +88,7 @@ export function renderMerchant() {
         <section class="merchant-actions">
           ${ACTIONS.map(a => `
             <button type="button" class="merchant-action" data-action="soon" data-msg="${a.label}待接入">
-              <img src="assets-20261101nn/merchant/${a.icon}" alt="">
+              <img src="assets-20261101oo/merchant/${a.icon}" alt="">
               <span>${a.label}</span>
             </button>`).join('')}
         </section>
@@ -98,7 +98,7 @@ export function renderMerchant() {
             <h2>待处理订单</h2>
             <button type="button" class="merchant-orders-more" data-action="soon" data-msg="全部订单待接入">
               <span class="merchant-badge">2</span>
-              <img src="assets-20261101nn/svg/home/right-c.svg" alt="">
+              <img src="assets-20261101oo/svg/home/right-c.svg" alt="">
             </button>
           </div>
           ${ORDERS.map(orderCard).join('')}
@@ -107,19 +107,19 @@ export function renderMerchant() {
 
       <nav class="home-tabbar">
         <button type="button" class="tab-item" data-action="go" data-to="#/home">
-          <img src="assets-20261101nn/svg/shop/home-grey.svg" alt=""><span>首页</span>
+          <img src="assets-20261101oo/svg/shop/home-grey.svg" alt=""><span>首页</span>
         </button>
         <button type="button" class="tab-item" data-action="go" data-to="#/shopping">
-          <img src="assets-20261101nn/svg/home/bag.svg" alt=""><span>购物</span>
+          <img src="assets-20261101oo/svg/home/bag.svg" alt=""><span>购物</span>
         </button>
         <button type="button" class="tab-scan" data-action="go" data-to="#/scan">
-          <span class="tab-scan-circle"><img src="assets-20261101nn/svg/home/scan.svg" alt="扫码"></span>
+          <span class="tab-scan-circle"><img src="assets-20261101oo/svg/home/scan.svg" alt="扫码"></span>
         </button>
         <button type="button" class="tab-item is-active" data-action="go" data-to="#/merchant">
-          <img src="assets-20261101nn/svg/merchant/app-active.svg" alt=""><span>商家</span>
+          <img src="assets-20261101oo/svg/merchant/app-active.svg" alt=""><span>商家</span>
         </button>
         <button type="button" class="tab-item" data-action="go" data-to="#/mine">
-          <img src="assets-20261101nn/svg/home/user.svg" alt=""><span>我的</span>
+          <img src="assets-20261101oo/svg/home/user.svg" alt=""><span>我的</span>
         </button>
       </nav>
     </div>`;
@@ -130,16 +130,16 @@ function orderMedia(media) {
     return `
       <div class="merchant-combo">
         <div class="merchant-combo-row">
-          <img class="merchant-combo-helmet" src="assets-20261101nn/product-helmet.png" alt="">
-          <img class="merchant-combo-thumb" src="assets-20261101nn/thumb-155.png" alt="">
+          <img class="merchant-combo-helmet" src="assets-20261101oo/product-helmet.png" alt="">
+          <img class="merchant-combo-thumb" src="assets-20261101oo/thumb-155.png" alt="">
         </div>
         <div class="merchant-combo-row">
-          <img class="merchant-combo-hygro" src="assets-20261101nn/product-hygrometer.png" alt="">
-          <img class="merchant-combo-strip" src="assets-20261101nn/product-strip.png" alt="">
+          <img class="merchant-combo-hygro" src="assets-20261101oo/product-hygrometer.png" alt="">
+          <img class="merchant-combo-strip" src="assets-20261101oo/product-strip.png" alt="">
         </div>
       </div>`;
   }
-  return `<img class="merchant-media-img" src="assets-20261101nn/product-helmet.png" alt="">`;
+  return `<img class="merchant-media-img" src="assets-20261101oo/product-helmet.png" alt="">`;
 }
 
 function orderCard(order) {

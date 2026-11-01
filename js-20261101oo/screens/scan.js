@@ -6,10 +6,10 @@ export function renderScan() {
       <header class="scan-header">
         ${statusBar()}
         <div class="navbar">
-          <button type="button" class="nav-back scan-back" data-action="go" data-to="#/home" aria-label="返回"><img src="assets-20261101nn/svg/back.svg" alt=""></button>
+          <button type="button" class="nav-back scan-back" data-action="go" data-to="#/home" aria-label="返回"><img src="assets-20261101oo/svg/back.svg" alt=""></button>
           <span class="scan-title">扫码</span>
           <button type="button" class="nav-capsule-btn" data-action="go" data-to="#/index" aria-label="关闭并返回原型目录">
-            <img class="nav-capsule" src="assets-20261101nn/svg/capsule.svg" alt="">
+            <img class="nav-capsule" src="assets-20261101oo/svg/capsule.svg" alt="">
           </button>
         </div>
       </header>
@@ -24,15 +24,15 @@ export function renderScan() {
         <p class="scan-hint">对准柜机二维码，自动识别</p>
         <div class="scan-actions">
           <button type="button" class="scan-action" data-action="go" data-to="#/pickup">
-            <span class="scan-action-icon"><img src="assets-20261101nn/svg/scan.svg" alt=""></span>
+            <span class="scan-action-icon"><img src="assets-20261101oo/svg/scan.svg" alt=""></span>
             <span>扫码取货</span>
           </button>
           <button type="button" class="scan-action" data-action="go" data-to="#/shopping">
-            <span class="scan-action-icon"><img src="assets-20261101nn/svg/shop/cart.svg" alt=""></span>
+            <span class="scan-action-icon"><img src="assets-20261101oo/svg/shop/cart.svg" alt=""></span>
             <span>扫码购物</span>
           </button>
           <button type="button" class="scan-action" data-action="soon" data-msg="开门码待接入">
-            <span class="scan-action-icon"><img src="assets-20261101nn/svg/storage/local.svg" alt=""></span>
+            <span class="scan-action-icon"><img src="assets-20261101oo/svg/storage/local.svg" alt=""></span>
             <span>开门码</span>
           </button>
         </div>

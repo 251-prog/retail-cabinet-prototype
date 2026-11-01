@@ -17,16 +17,16 @@ export function renderAddress() {
       <header class="pay-header">
         ${statusBar()}
         <div class="navbar navbar-title">
-          <button type="button" class="nav-back" data-action="back" data-to="#/home" aria-label="返回"><img src="assets-20261101nn/svg/back-pay.svg" alt=""></button>
+          <button type="button" class="nav-back" data-action="back" data-to="#/home" aria-label="返回"><img src="assets-20261101oo/svg/back-pay.svg" alt=""></button>
           <h1 class="nav-title">选择地区</h1>
           <button type="button" class="nav-capsule-btn" data-action="go" data-to="#/index" aria-label="关闭并返回原型目录">
-            <img class="nav-capsule" src="assets-20261101nn/svg/capsule-pay.svg" alt="">
+            <img class="nav-capsule" src="assets-20261101oo/svg/capsule-pay.svg" alt="">
           </button>
         </div>
       </header>
       <main class="addr-main">
         <label class="addr-search">
-          <img src="assets-20261101nn/svg/address/search.svg" alt="">
+          <img src="assets-20261101oo/svg/address/search.svg" alt="">
           <input class="addr-search-input" type="text" placeholder="搜索地区" aria-label="搜索地区">
         </label>
 
@@ -34,14 +34,14 @@ export function renderAddress() {
           <p class="addr-label">您的位置</p>
           <div class="addr-current-row">
             <span class="addr-current-name">${getRegion()}</span>
-            <button type="button" class="addr-relocate" data-action="relocate">重新定位<img src="assets-20261101nn/svg/address/redo.svg" alt=""></button>
+            <button type="button" class="addr-relocate" data-action="relocate">重新定位<img src="assets-20261101oo/svg/address/redo.svg" alt=""></button>
           </div>
         </section>
 
         <section class="addr-section">
           <div class="addr-section-head">
             <span>常用地址</span>
-            <button type="button" class="addr-all" data-action="soon" data-msg="全部地址待接入">全部<img src="assets-20261101nn/svg/address/chevron.svg" alt=""></button>
+            <button type="button" class="addr-all" data-action="soon" data-msg="全部地址待接入">全部<img src="assets-20261101oo/svg/address/chevron.svg" alt=""></button>
           </div>
           ${COMMON.map(item => addrItem(item, '常用地址')).join('')}
         </section>
@@ -49,7 +49,7 @@ export function renderAddress() {
         <section class="addr-section">
           ${NEARBY.map(item => addrItem(item, '附近地址')).join('')}
           <button type="button" class="addr-more" data-action="soon" data-msg="更多附近地址待接入">
-            更多附近地址<img src="assets-20261101nn/svg/address/chevron.svg" alt="">
+            更多附近地址<img src="assets-20261101oo/svg/address/chevron.svg" alt="">
           </button>
         </section>
       </main>
@@ -62,7 +62,7 @@ function addrItem(item, label) {
     <button type="button" class="addr-item" data-action="region-select" data-region="${item.region}">
       <span class="addr-item-main">
         <span class="addr-item-top">
-          <span class="addr-tag">${nearby ? `<img src="assets-20261101nn/svg/address/pin-sm.svg" alt="">` : ''}${label}</span>
+          <span class="addr-tag">${nearby ? `<img src="assets-20261101oo/svg/address/pin-sm.svg" alt="">` : ''}${label}</span>
           <span class="addr-item-name">${item.name}</span>
         </span>
         <span class="addr-item-meta">${item.meta}</span>

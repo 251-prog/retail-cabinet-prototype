@@ -21,14 +21,14 @@ export function renderMine() {
         <div class="navbar">
           <span class="mine-title">我的</span>
           <button type="button" class="nav-capsule-btn" data-action="go" data-to="#/index" aria-label="关闭并返回原型目录">
-            <img class="nav-capsule" src="assets-20261101nn/svg/capsule.svg" alt="">
+            <img class="nav-capsule" src="assets-20261101oo/svg/capsule.svg" alt="">
           </button>
         </div>
       </header>
 
       <main class="mine-main">
         <section class="mine-profile">
-          <img class="mine-avatar" src="assets-20261101nn/mine/avatar.png" alt="">
+          <img class="mine-avatar" src="assets-20261101oo/mine/avatar.png" alt="">
           <div class="mine-profile-info">
             <p class="mine-name">李师傅</p>
             <div class="mine-id-row">
@@ -39,23 +39,23 @@ export function renderMine() {
         </section>
 
         <section class="mine-balance">
-          <img class="mine-balance-bg" src="assets-20261101nn/mine/balance-bg.png" alt="">
+          <img class="mine-balance-bg" src="assets-20261101oo/mine/balance-bg.png" alt="">
           <div class="mine-balance-head">
             <p class="mine-balance-left">余额: <span class="mine-money">¥1.25万</span></p>
             <div class="mine-balance-right">
               <span>冻结余额 <span class="mine-money">¥3863.00</span></span>
               <button type="button" class="mine-eye" data-action="soon" data-msg="余额明细待接入" aria-label="余额明细">
-                <img src="assets-20261101nn/svg/mine/eye.svg" alt="">
+                <img src="assets-20261101oo/svg/mine/eye.svg" alt="">
               </button>
             </div>
           </div>
           <div class="mine-balance-stats">
             <div class="mine-stat">
-              <span class="mine-stat-icon mine-icon-orange"><img src="assets-20261101nn/svg/mine/box.svg" alt=""></span>
+              <span class="mine-stat-icon mine-icon-orange"><img src="assets-20261101oo/svg/mine/box.svg" alt=""></span>
               <span class="mine-stat-text"><b>3 <i>单</i></b><em>待取货</em></span>
             </div>
             <div class="mine-stat">
-              <span class="mine-stat-icon mine-icon-green"><img src="assets-20261101nn/svg/mine/app-one.svg" alt=""></span>
+              <span class="mine-stat-icon mine-icon-green"><img src="assets-20261101oo/svg/mine/app-one.svg" alt=""></span>
               <span class="mine-stat-text"><b>3 <i>单</i></b><em>租赁中</em></span>
             </div>
           </div>
@@ -63,51 +63,51 @@ export function renderMine() {
 
         <section class="mine-todos">
           <button type="button" class="mine-todo" data-action="soon" data-msg="待付款待接入">
-            <img src="assets-20261101nn/svg/mine/todo-pay.svg" alt=""><span>待付款</span>
+            <img src="assets-20261101oo/svg/mine/todo-pay.svg" alt=""><span>待付款</span>
           </button>
           <button type="button" class="mine-todo" data-action="soon" data-msg="待使用待接入">
-            <img src="assets-20261101nn/svg/mine/todo-use.svg" alt=""><span>待使用</span>
+            <img src="assets-20261101oo/svg/mine/todo-use.svg" alt=""><span>待使用</span>
           </button>
           <button type="button" class="mine-todo" data-action="soon" data-msg="售后待接入">
-            <img src="assets-20261101nn/svg/mine/todo-aftersale.svg" alt=""><span>售后</span>
+            <img src="assets-20261101oo/svg/mine/todo-aftersale.svg" alt=""><span>售后</span>
           </button>
         </section>
 
         <section class="mine-menu">
           ${MENU.map(item => `
             <button type="button" class="mine-row" data-action="soon" data-msg="${item.label}待接入">
-              <img class="mine-row-icon" src="assets-20261101nn/svg/mine/${item.icon}" alt="">
+              <img class="mine-row-icon" src="assets-20261101oo/svg/mine/${item.icon}" alt="">
               <span class="mine-row-label">${item.label}</span>
               <span class="mine-row-desc">${item.desc}</span>
-              <img class="mine-row-arrow" src="assets-20261101nn/svg/mine/chevron.svg" alt="">
+              <img class="mine-row-arrow" src="assets-20261101oo/svg/mine/chevron.svg" alt="">
             </button>`).join('')}
         </section>
 
         <section class="mine-menu">
           ${SETTINGS.map(item => `
             <button type="button" class="mine-row" data-action="soon" data-msg="${item.label}待接入">
-              <img class="mine-row-icon" src="assets-20261101nn/svg/mine/${item.icon}" alt="">
+              <img class="mine-row-icon" src="assets-20261101oo/svg/mine/${item.icon}" alt="">
               <span class="mine-row-label is-strong">${item.label}</span>
-              <img class="mine-row-arrow" src="assets-20261101nn/svg/mine/chevron.svg" alt="">
+              <img class="mine-row-arrow" src="assets-20261101oo/svg/mine/chevron.svg" alt="">
             </button>`).join('')}
         </section>
       </main>
 
       <nav class="home-tabbar">
         <button type="button" class="tab-item" data-action="go" data-to="#/home">
-          <img src="assets-20261101nn/svg/shop/home-grey.svg" alt=""><span>首页</span>
+          <img src="assets-20261101oo/svg/shop/home-grey.svg" alt=""><span>首页</span>
         </button>
         <button type="button" class="tab-item" data-action="go" data-to="#/shopping">
-          <img src="assets-20261101nn/svg/home/bag.svg" alt=""><span>购物</span>
+          <img src="assets-20261101oo/svg/home/bag.svg" alt=""><span>购物</span>
         </button>
         <button type="button" class="tab-scan" data-action="go" data-to="#/scan">
-          <span class="tab-scan-circle"><img src="assets-20261101nn/svg/home/scan.svg" alt="扫码"></span>
+          <span class="tab-scan-circle"><img src="assets-20261101oo/svg/home/scan.svg" alt="扫码"></span>
         </button>
         <button type="button" class="tab-item" data-action="go" data-to="#/merchant">
-          <img src="assets-20261101nn/svg/home/app.svg" alt=""><span>商家</span>
+          <img src="assets-20261101oo/svg/home/app.svg" alt=""><span>商家</span>
         </button>
         <button type="button" class="tab-item is-active" data-action="go" data-to="#/mine">
-          <img src="assets-20261101nn/svg/mine/user-active.svg" alt=""><span>我的</span>
+          <img src="assets-20261101oo/svg/mine/user-active.svg" alt=""><span>我的</span>
         </button>
       </nav>
     </div>`;
