@@ -28,10 +28,10 @@ function header(title, backTo = '#/home') {
     <header class="pay-header">
       ${statusBar()}
       <div class="navbar navbar-title">
-        <button type="button" class="nav-back" data-action="back" data-to="${backTo}" aria-label="返回"><img src="assets-20261101hh/svg/back-pay.svg" alt=""></button>
+        <button type="button" class="nav-back" data-action="back" data-to="${backTo}" aria-label="返回"><img src="assets-20261101ii/svg/back-pay.svg" alt=""></button>
         <h1 class="nav-title">${title}</h1>
         <button type="button" class="nav-capsule-btn" data-action="go" data-to="#/index" aria-label="关闭并返回原型目录">
-          <img class="nav-capsule" src="assets-20261101hh/svg/capsule-pay.svg" alt="">
+          <img class="nav-capsule" src="assets-20261101ii/svg/capsule-pay.svg" alt="">
         </button>
       </div>
     </header>`;
@@ -50,7 +50,7 @@ export function renderStorageConfig() {
             <span class="pay-card-side">到柜</span>
           </div>
           <div class="cabinet-row">
-            <div class="cabinet-thumb"><img src="assets-20261101hh/cabinet.png" alt=""></div>
+            <div class="cabinet-thumb"><img src="assets-20261101ii/cabinet.png" alt=""></div>
             <div class="cabinet-info">
               <div class="cabinet-title-row">
                 <span class="cabinet-name">${CABINET.name}</span>
@@ -74,7 +74,7 @@ export function renderStorageConfig() {
             ${SIZES.map(s => `
               <button type="button" class="storage-size ${s.id === selectedSize ? 'is-active' : ''}"
                 data-action="storage-size" data-id="${s.id}">
-                <img class="storage-size-img" src="assets-20261101hh/${s.img}" alt="">
+                <img class="storage-size-img" src="assets-20261101ii/${s.img}" alt="">
                 <span class="storage-size-body">
                   <span class="storage-size-row">
                     <span class="storage-size-name">${s.name}</span>
@@ -83,7 +83,7 @@ export function renderStorageConfig() {
                   <span class="storage-size-desc">${s.desc}</span>
                   <span class="storage-size-dims">${s.dims}</span>
                 </span>
-                <span class="storage-size-check">${s.id === selectedSize ? `<img src="assets-20261101hh/svg/check-green.svg" alt="">` : ''}</span>
+                <span class="storage-size-check">${s.id === selectedSize ? `<img src="assets-20261101ii/svg/check-green.svg" alt="">` : ''}</span>
               </button>`).join('')}
           </div>
         </section>
@@ -101,13 +101,13 @@ export function renderStorageConfig() {
 
         <section class="pay-card storage-row-card">
           <span class="pay-card-title">充电白送</span>
-          <span class="storage-row-right">Type-C 5V/2A<img src="assets-20261101hh/svg/home/right-c.svg" alt=""></span>
+          <span class="storage-row-right">Type-C 5V/2A<img src="assets-20261101ii/svg/home/right-c.svg" alt=""></span>
         </section>
 
         <section class="pay-card storage-rule-card">
           <div class="storage-card-head">
             <span class="pay-card-title">计费规则（后付）</span>
-            <img class="storage-chevron" src="assets-20261101hh/svg/home/right-c.svg" alt="">
+            <img class="storage-chevron" src="assets-20261101ii/svg/home/right-c.svg" alt="">
           </div>
           <div class="storage-rule-note">
             <p>后付：存物免费（前 10 分钟免费时长），取物时按 <b class="orange">2.5 元/24h</b> 从计发账户扣（允许负数）；超 <b class="orange">48h</b> 未取触发清柜，物品移出长期保管（不丢弃）+ 持续计费 + 通知。</p>
@@ -130,11 +130,11 @@ function statusHero({ badge, badgeTone, elapsed = '00:03:00', freeLabel = '3 / 1
     <section class="storage-hero">
       <div class="storage-hero-head">
         <span class="storage-hero-name">${CABINET.name}</span>
-        <span class="storage-local"><img src="assets-20261101hh/svg/storage/local.svg" alt=""></span>
+        <span class="storage-local"><img src="assets-20261101ii/svg/storage/local.svg" alt=""></span>
       </div>
-      <img class="storage-divider" src="assets-20261101hh/svg/storage/divider.svg" alt="">
+      <img class="storage-divider" src="assets-20261101ii/svg/storage/divider.svg" alt="">
       <div class="storage-status">
-        <span class="storage-status-icon"><img src="assets-20261101hh/svg/storage/timer.svg" alt=""></span>
+        <span class="storage-status-icon"><img src="assets-20261101ii/svg/storage/timer.svg" alt=""></span>
         <span class="storage-status-text">
           <b>柜格已锁定</b>
           <em>正在为本次暂存计时</em>
@@ -236,14 +236,14 @@ export function renderStorageOpened() {
         <div class="sheet-mask" data-action="storage-done"></div>
         <section class="bottom-sheet storage-opened-sheet" role="dialog" aria-label="柜门已打开">
           <span class="sheet-handle"></span>
-          <button type="button" class="sheet-close success-close" data-action="storage-done" aria-label="关闭"><img src="assets-20261101hh/svg/close-sm.svg" alt=""></button>
+          <button type="button" class="sheet-close success-close" data-action="storage-done" aria-label="关闭"><img src="assets-20261101ii/svg/close-sm.svg" alt=""></button>
           <div class="success-hero">
-            <span class="success-icon"><img src="assets-20261101hh/svg/check-small.svg" alt=""></span>
+            <span class="success-icon"><img src="assets-20261101ii/svg/check-small.svg" alt=""></span>
             <p class="success-title">柜门已打开，本单格号D01</p>
             <p class="success-sub">后付·取物时结算</p>
           </div>
           <div class="warn-box">
-            <img src="assets-20261101hh/svg/attention.svg" alt="">
+            <img src="assets-20261101ii/svg/attention.svg" alt="">
             <p>存物 免费（前 10 分钟免费时长）。取物时按 2.5 元/24h 从<b class="orange">计发账户</b>结算（后付）。本柜剩余 7 个空格。</p>
           </div>
           <button type="button" class="btn-primary sheet-wide-btn" data-action="storage-done">存物完成·我已关闭柜门</button>
@@ -290,14 +290,14 @@ export function renderStoragePickup() {
         <div class="sheet-mask" data-action="back" data-to="#/storage/active"></div>
         <section class="bottom-sheet scan-sheet" role="dialog" aria-label="到柜扫码取物">
           <span class="sheet-handle"></span>
-          <button type="button" class="sheet-close success-close" data-action="back" data-to="#/storage/active" aria-label="关闭"><img src="assets-20261101hh/svg/close-sm.svg" alt=""></button>
+          <button type="button" class="sheet-close success-close" data-action="back" data-to="#/storage/active" aria-label="关闭"><img src="assets-20261101ii/svg/close-sm.svg" alt=""></button>
           <div class="scan-hero">
-            <span class="scan-icon"><img src="assets-20261101hh/svg/scan.svg" alt=""></span>
+            <span class="scan-icon"><img src="assets-20261101ii/svg/scan.svg" alt=""></span>
             <p class="scan-title">到柜扫码取物</p>
             <p class="scan-sub">请到 <b>${CABINET.name}</b> 柜前扫码，<br>确认后即可开柜取物</p>
           </div>
           <div class="warn-box">
-            <img src="assets-20261101hh/svg/attention.svg" alt="">
+            <img src="assets-20261101ii/svg/attention.svg" alt="">
             <p>本次寄存前 10 分钟免费，超时按 ¥2/24h 从计发账户结算。</p>
           </div>
           <button type="button" class="btn-primary sheet-wide-btn" data-action="storage-pickup-cabinet">扫码取物</button>
@@ -314,7 +314,7 @@ export function renderStorageCabinet() {
         <section class="pay-card pay-cabinet">
           <div class="pay-card-head"><span class="pay-card-title">存放柜机</span><span class="pay-card-side">到柜</span></div>
           <div class="cabinet-row">
-            <div class="cabinet-thumb"><img src="assets-20261101hh/cabinet.png" alt=""></div>
+            <div class="cabinet-thumb"><img src="assets-20261101ii/cabinet.png" alt=""></div>
             <div class="cabinet-info">
               <div class="cabinet-title-row"><span class="cabinet-name">${CABINET.name}</span><span class="tag tag-outline-green">${CABINET.status}</span></div>
               <p class="cabinet-meta">距您 ${CABINET.distance} · 编号 ${CABINET.code}</p>
@@ -331,7 +331,7 @@ export function renderStorageCabinet() {
           <div class="pickup-list">
             <div class="pickup-row">
               <div class="pickup-item">
-                <div class="pickup-thumb storage-thumb"><img src="assets-20261101hh/storage-small.png" alt=""></div>
+                <div class="pickup-thumb storage-thumb"><img src="assets-20261101ii/storage-small.png" alt=""></div>
                 <div class="pickup-info">
                   <div class="pickup-name-row"><span class="tag tag-blue">寄存</span><span class="pickup-name">寄存物品</span></div>
                   <p class="pickup-sub">#CG20260707-091 · D01格</p>
@@ -355,14 +355,14 @@ function lockerSheet() {
       <div class="sheet-mask" data-action="storage-close-locker"></div>
       <section class="bottom-sheet open-sheet" role="dialog" aria-label="D01格已开">
         <span class="sheet-handle"></span>
-        <button type="button" class="sheet-close success-close" data-action="storage-close-locker" aria-label="关闭"><img src="assets-20261101hh/svg/close-sm.svg" alt=""></button>
+        <button type="button" class="sheet-close success-close" data-action="storage-close-locker" aria-label="关闭"><img src="assets-20261101ii/svg/close-sm.svg" alt=""></button>
         <div class="open-hero">
-          <span class="locker-icon"><img src="assets-20261101hh/svg/locker-open.svg" alt=""></span>
+          <span class="locker-icon"><img src="assets-20261101ii/svg/locker-open.svg" alt=""></span>
           <p class="open-title">D01格已开</p>
           <p class="open-sub">寄存物品<br>请取出商品并关好柜门</p>
         </div>
         <div class="warn-box">
-          <img src="assets-20261101hh/svg/attention.svg" alt="">
+          <img src="assets-20261101ii/svg/attention.svg" alt="">
           <p>开柜即交易成功，24h 内可售后。柜门未关好将提醒您。</p>
         </div>
         <button type="button" class="btn-primary sheet-wide-btn" data-action="storage-locker-done">我已关门</button>

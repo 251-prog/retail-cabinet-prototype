@@ -35,7 +35,7 @@ export function renderSelect() {
 function cabinetCard() {
   return `
     <section class="cabinet-card">
-      <div class="cabinet-thumb"><img src="assets-20261101hh/cabinet.png" alt=""></div>
+      <div class="cabinet-thumb"><img src="assets-20261101ii/cabinet.png" alt=""></div>
       <div class="cabinet-info">
         <div class="cabinet-title-row">
           <span class="cabinet-name">${CABINET.name}</span>
@@ -67,7 +67,7 @@ function productRow(p) {
   } else if (qty > 0) {
     control = stepper(p.id, qty);
   } else {
-    control = `<button type="button" class="icon-btn add-btn" data-action="add" data-id="${p.id}" aria-label="加入购物车"><img src="assets-20261101hh/svg/plus.svg" alt=""></button>`;
+    control = `<button type="button" class="icon-btn add-btn" data-action="add" data-id="${p.id}" aria-label="加入购物车"><img src="assets-20261101ii/svg/plus.svg" alt=""></button>`;
   }
   return `
     <article class="product">
@@ -89,9 +89,9 @@ function productRow(p) {
 function stepper(id, qty) {
   return `
     <div class="stepper">
-      <button type="button" class="step-btn" data-action="dec" data-id="${id}" aria-label="减少"><img src="assets-20261101hh/svg/plus-alt.svg" alt=""></button>
+      <button type="button" class="step-btn" data-action="dec" data-id="${id}" aria-label="减少"><img src="assets-20261101ii/svg/plus-alt.svg" alt=""></button>
       <span class="step-qty">${qty}</span>
-      <button type="button" class="step-btn" data-action="inc" data-id="${id}" aria-label="增加"><img src="assets-20261101hh/svg/plus.svg" alt=""></button>
+      <button type="button" class="step-btn" data-action="inc" data-id="${id}" aria-label="增加"><img src="assets-20261101ii/svg/plus.svg" alt=""></button>
     </div>`;
 }
 
@@ -99,7 +99,7 @@ function promo() {
   return `
     <div class="promo">
       <div class="promo-left">
-        <span class="promo-icon"><img src="assets-20261101hh/svg/help.svg" alt=""></span>
+        <span class="promo-icon"><img src="assets-20261101ii/svg/help.svg" alt=""></span>
         <div class="promo-text">
           <p class="promo-title">此柜没有想要的？</p>
           <p class="promo-sub">默认选当前柜收货</p>
@@ -114,7 +114,7 @@ function bottomBar() {
     <footer class="bottom-bar">
       <button type="button" class="cart-summary" data-action="open-cart">
         <span class="cart-icon">
-          <img src="assets-20261101hh/cart-mascot.png" alt="">
+          <img src="assets-20261101ii/cart-mascot.png" alt="">
           ${cartCount() ? `<span class="cart-badge">${cartCount()}</span>` : ''}
         </span>
         <span class="cart-amount"><span class="cny">¥</span><span class="num">${formatMoney(cartTotal())}</span></span>
@@ -133,7 +133,7 @@ function cartSheet() {
       <section class="cart-sheet" role="dialog" aria-label="购物车">
         <header class="sheet-header">
           <h2>购物车</h2>
-          <button type="button" class="sheet-close" data-action="close-cart" aria-label="关闭"><img src="assets-20261101hh/svg/close.svg" alt=""></button>
+          <button type="button" class="sheet-close" data-action="close-cart" aria-label="关闭"><img src="assets-20261101ii/svg/close.svg" alt=""></button>
         </header>
         <p class="sheet-banner">限同柜商品，跨柜购买请先清空购物车</p>
         <div class="sheet-tools">
@@ -142,7 +142,7 @@ function cartSheet() {
             <span class="select-all-text">全选<span class="muted">（已选 ${checkedCount}）</span></span>
           </div>
           <button type="button" class="clear-btn" data-action="clear-cart">
-            <img src="assets-20261101hh/svg/delete.svg" alt=""><span>清空</span>
+            <img src="assets-20261101ii/svg/delete.svg" alt=""><span>清空</span>
           </button>
         </div>
         <div class="cart-items">
@@ -151,7 +151,7 @@ function cartSheet() {
         <footer class="sheet-footer">
           <div class="cart-summary">
             <span class="cart-icon">
-              <img src="assets-20261101hh/cart-mascot.png" alt="">
+              <img src="assets-20261101ii/cart-mascot.png" alt="">
               ${cartCount() ? `<span class="cart-badge">${cartCount()}</span>` : ''}
             </span>
             <span class="cart-amount"><span class="cny">¥</span><span class="num">${formatMoney(cartTotal({ checkedOnly: true }))}</span></span>
@@ -176,9 +176,9 @@ function cartRow(item) {
         <div class="cart-bottom">
           ${priceMarkup(item.price)}
           <div class="stepper">
-            <button type="button" class="step-btn" data-action="dec" data-id="${item.id}" aria-label="减少"><img src="assets-20261101hh/svg/plus-alt.svg" alt=""></button>
+            <button type="button" class="step-btn" data-action="dec" data-id="${item.id}" aria-label="减少"><img src="assets-20261101ii/svg/plus-alt.svg" alt=""></button>
             <span class="step-qty">${item.qty}</span>
-            <button type="button" class="step-btn" data-action="inc" data-id="${item.id}" aria-label="增加"><img src="assets-20261101hh/svg/plus.svg" alt=""></button>
+            <button type="button" class="step-btn" data-action="inc" data-id="${item.id}" aria-label="增加"><img src="assets-20261101ii/svg/plus.svg" alt=""></button>
           </div>
         </div>
       </div>
@@ -186,5 +186,5 @@ function cartRow(item) {
 }
 
 function checkbox(checked, action, id = '') {
-  return `<button type="button" class="checkbox ${checked ? 'is-checked' : ''}" data-action="${action}"${id ? ` data-id="${id}"` : ''} aria-label="选择"><img src="assets-20261101hh/svg/check.svg" alt=""></button>`;
+  return `<button type="button" class="checkbox ${checked ? 'is-checked' : ''}" data-action="${action}"${id ? ` data-id="${id}"` : ''} aria-label="选择"><img src="assets-20261101ii/svg/check.svg" alt=""></button>`;
 }

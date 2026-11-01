@@ -11,7 +11,7 @@ export function renderShopping() {
         ${statusBar()}
         <div class="home-nav">
           <button type="button" class="home-loc" data-action="go" data-to="#/address">
-            <img class="home-loc-pin" src="assets/svg/home/pin.svg" alt="">
+            <span class="home-loc-slot"><img class="home-loc-pin" src="assets/svg/home/pin.svg" alt=""></span>
             <span class="home-loc-text">${getRegion()}</span>
             <img class="home-loc-arrow" src="assets/svg/home/chevron-down.svg" alt="">
           </button>
